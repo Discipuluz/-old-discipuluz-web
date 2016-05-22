@@ -30,7 +30,7 @@
 		<div  id="featured">
 			<div class="container">
 				<header>
-					<h2>DECISÕES CONSCIENTES Dois</h2>
+					<h2>DECISÕES CONSCIENTES</h2>
 				</header>
 				<p>
 					A <span style="font-weight: 500; color: #99D353;">Discipuluz</span> nasceu para ajudar as pessoas a tomarem <span style="font-weight: 500; color: #99D353;">decisões mais conscientes</span> sobre seu futuro.</br>
