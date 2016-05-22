@@ -8,8 +8,9 @@
 	<head>
 		<title>Discipuluz - Tipologia Carl Jung</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
+		<meta name="description" content="Como nossa personalidade é construída com base em quatro pares de características" />
+		<meta name="keywords" content="Questionário, Jung, MBTI, autoconhecimento" />
+		<!-- Facebook -->
 		<meta property="og:url"                content="http://www.discipuluz.com/saibamais.php" />
 		<meta property="og:type"               content="article" />
 		<meta property="og:title"              content="Tipologia Jung / Myers-Briggs" />
@@ -68,7 +69,7 @@ A Tipologia de Myers-Briggs, do mesmo modo que a Tipologia de Personalidade de J
 					<!-- Sidebar -->
 					<div id="sidebar" class="4u">
 						<section>
-							<CENTER><a href="https://pt.wikipedia.org/wiki/Carl_Gustav_Jung"><img src="images/carl-jung.jpg" style="width: 50%" alt="Discipuluz - Carl Jung"></a></CENTER>
+							<CENTER><a href="https://pt.wikipedia.org/wiki/Carl_Gustav_Jung"><img src="images/carl-jung.jpg" style="width: 50%" alt="Discipuluz - Carl Jung" title="Carl Jung"></a></CENTER>
 							<header>
 								<h2 style="text-align: center">Carl Jung</h2>
 								<p style="text-align: center">Psiquiatra e psicanalista suíço, foi fundador da escola analítica da psicologia.</br>

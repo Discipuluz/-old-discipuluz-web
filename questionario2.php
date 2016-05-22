@@ -8,8 +8,15 @@
 	<head>
 		<title>Discipuluz - Questionário</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
+		<meta name="description" content="Descubra como você se comporta perante situações e atitudes, seus pontos fortes e possíveis áreas de autodesenvolvimento" />
+		<meta name="keywords" content="questionário, autoconhecimento, Discipuluz, discipuluz, personalidade" />
+		<!-- Facebook -->
+		<meta property="og:url"                content="http://www.discipuluz.com/questionario.php" />
+		<meta property="og:type"               content="article" />
+		<meta property="og:title"              content="Discipuluz - Questionario de inclinações pessoais" />
+		<meta property="og:description"        content="Descobra como você se comporta perante situações e atitudes, seus pontos fortes e possíveis áreas de autodesenvolvimento" />
+		<meta property="og:image"              content="http://www.discipuluz.com/images/fbcover.jpg" />
+		<meta property="og:site_name" 				 content="Discipuluz"/>
 		<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,700,500,900' rel='stylesheet' type='text/css'>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 		<script src="js/skel.min.js"></script>

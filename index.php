@@ -8,8 +8,15 @@
 	<head>
 		<title>Discipuluz</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
+		<meta name="description" content="Conheça mais sobre cursos, faculdades e universidades. Faça nosso questionário e começe sua pesquisa para uma carreira feliz" />
+		<meta name="keywords" content="Discipuluz, discipuluz, faculdade, vestibular, vestibulares, universidade, Enem, graduação, universidades, faculdades, profissões, enem, engenharia civil, profissão, melhor faculdade em, estudante, escolher, orientação profissional, escolha, aprovação" />
+		<!-- Facebook -->
+		<meta property="og:url"                content="http://www.discipuluz.com/" />
+		<meta property="og:type"               content="article" />
+		<meta property="og:title"              content="Discipuluz - Home" />
+		<meta property="og:description"        content="Conheça mais sobre cursos, faculdades e universidades. Faça nosso questionário e começe sua pesquisa para uma carreira feliz" />
+		<meta property="og:image"              content="http://www.discipuluz.com/images/fbcover.jpg" />
+		<meta property="og:site_name" 				 content="Discipuluz"/>
 		<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,700,500,900' rel='stylesheet' type='text/css'>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 		<script src="js/skel.min.js"></script>
@@ -77,14 +84,14 @@
 				<div class="row">
 					<section class="6u">
 							<!-- Alterado -->
-						<img src="images/1,4 milhão.jpg" alt="" style="width: 100%">
+						<img src="images/1,4 milhão.jpg" alt="Número de universitários que abandonaram seus cursos de faculdade em 2015" title="Número de universitários que abandonaram seus cursos de faculdade em 2015" style="width: 100%">
 						<header style="margin-bottom:2.4em">
 							<h2> De alunos de ensino superior abandonaram seus cursos em 2015</h2>
 						</header>
 						<a href="http://noticias.universia.com.br/destaque/noticia/2015/10/06/1132040/indice-evasao-ensino-superior-brasil-cerca-21-inscreva-seminario.html#">noticias.universia.com.br</a>
 					</section>
 					<section class="6u">
-						<img src="images/27.719.jpg" alt="" style="width: 100%">
+						<img src="images/27.719.jpg" alt="Número de cursos de graduação que levam a uma profissão hoje no Brasil" title="Número de cursos de graduação hoje no Brasil" style="width: 100%">
 						<header>
 							<h2>Graduações, oferecidas por <span style="font-weight: 400; color: #99D353;">2.060</span> instituições de ensino superior, levam a <span style="font-weight: 400; color: #99D353;">265</span> carreiras hoje no Brasil!</h2>
 						</header>

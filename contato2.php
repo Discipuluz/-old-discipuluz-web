@@ -8,8 +8,15 @@
 	<head>
 		<title>Discipuluz - Contato</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
+		<meta name="description" content="Elogios, dúvidas, pedidos, críticas, feedbacks em geral. Conversem com a gente!" />
+		<meta name="keywords" content="Discipuluz, discipuluz, faculdade, vestibular, vestibulares, universidade, Enem, graduação, universidades, faculdades, profissões, enem, engenharia civil, profissão, melhor faculdade em, estudante, escolher, orientação profissional, escolha, aprovação" />
+		<!-- Facebook -->
+		<meta property="og:url"                content="http://www.discipuluz.com/contato.php" />
+		<meta property="og:type"               content="article" />
+		<meta property="og:title"              content="Discipuluz - Fale com a gente" />
+		<meta property="og:description"        content="Elogios, dúvidas, pedidos, críticas, feedbacks em geral. Conversem com a gente!" />
+		<meta property="og:image"              content="http://www.discipuluz.com/images/fbcover.jpg" />
+		<meta property="og:site_name" 				 content="Discipuluz"/>
 		<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,700,500,900' rel='stylesheet' type='text/css'>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 		<script src="js/skel.min.js"></script>
@@ -54,7 +61,7 @@
 		<div id="tweet">
 			<div class="container">
 				<section>
-					<blockquote>&ldquo;In posuere eleifend odio. Quisque semper augue mattis wisi. Maecenas ligula. Pellentesque viverra vulputate enim. Aliquam erat volutpat.&rdquo;</blockquote>
+					<blockquote>&ldquo;Os nossos maiores problemas não estão nos obstáculos do caminho, mas na escolha da direção errada.&rdquo; </br>Augusto Cury</blockquote>
 				</section>
 			</div>
 		</div>
