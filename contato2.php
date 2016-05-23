@@ -8,8 +8,15 @@
 	<head>
 		<title>Discipuluz - Contato</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
+		
+		<!-- jQuery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+		
+		<!-- Bootstrap -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+		
+		<!-- Other -->
 		<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,700,500,900' rel='stylesheet' type='text/css'>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 		<script src="js/skel.min.js"></script>
@@ -20,6 +27,8 @@
 			<link rel="stylesheet" href="css/style.css" />
 			<link rel="stylesheet" href="css/style-desktop.css" />
 		</noscript>
+		<link rel="stylesheet" href="css/forms.css" />
+		<link rel="stylesheet" href="css/contato.css" />
 		<link rel="icon" href="images/favicon.png">
 		<script type="text/javascript">
 		function validateEmail() {
@@ -34,23 +43,50 @@
 	</head>
 	<body>
 
-	<?php include 'header.php' ?>
+		<?php include 'header.php' ?>
 
-	<!-- Main -->
+		<!-- Main -->
 		<div id="main">
 			<div id="content" class="container">
 					<!--iframe src="https://docs.google.com/forms/d/1o2hsOCjYX5jLlsKxkQeB4Dfa0Oumtm4qxMX37tLgyNQ/viewform" width="100%" height="1050" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe-->
 					<form action="register.php" method="post" onsubmit="return validateEmail()">
-						Qual seu nome? <input id="nome" type="text" name="name" required><br />
-						Email: <input id="email" type="text" name="email" required><br />
-						Comentários <input id="comments" type="text" name="comments"><br />
-						<input type="submit" value="Enviar">
+						<div class="col-xs-12 col-md-5 form-card">
+							<div class="col-xs-12 form-field">
+								<div class="col-xs-1 form-field-arrow"></div>
+								<div class="col-xs-11 form-field-content">
+									<input id="nome" type="text" name="name" required />
+									<span class="form-field-bar"></span>
+									<label>Qual seu nome?</label>
+								</div>
+							</div>
+							<div class="col-xs-12 form-field">
+								<div class="col-xs-1 form-field-arrow"></div>
+								<div class="col-xs-11 form-field-content">
+									<input id="email" type="text" name="email" required />
+									<span class="form-field-bar"></span>
+									<label>Email</label>  
+								</div>
+							</div>
+							<div class="col-xs-12 form-field">
+								<div class="col-xs-1 form-field-arrow"></div>
+								<div class="col-xs-11 form-field-content">
+									<input id="comments" type="email" name="comments" />
+									<span class="form-field-bar"></span>
+									<label>Comentários</label>
+								</div>
+							</div>
+							<div class="col-xs-12 form-submit">
+								<div class="col-xs-12 col-md-offset-8 col-md-4">
+									<button type="submit">Enviar</button>
+								</div>
+							</div>
+						</div>
 					</form>
 			</div>
 		</div>
-	<!-- /Main -->
+		<!-- /Main -->
 
-	<!-- Tweet -->
+		<!-- Tweet -->
 		<div id="tweet">
 			<div class="container">
 				<section>
@@ -58,10 +94,9 @@
 				</section>
 			</div>
 		</div>
-	<!-- /Tweet -->
+		<!-- /Tweet -->
 
-	<?php include 'footer.php' ?>
-
+		<?php include 'footer.php' ?>
 
 	</body>
 </html>
