@@ -20,9 +20,9 @@
 	<head>
 		<title>Discipuluz - Perfil <?php echo utf8_encode($profile['initial']); ?></title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<meta name="description" content="Descobra como você se comporta perante situações e atitudes, seus pontos fortes e possíveis áreas de autodesenvolvimento" />
-		<meta name="keywords" content="" />
-
+		<meta name="description" content="Descubra como você se comporta perante situações e atitudes, seus pontos fortes e possíveis áreas de autodesenvolvimento" />
+		<meta name="keywords" content="Discipuluz, discipuluz, faculdade, vestibular, vestibulares, universidade, Enem, graduação, universidades, faculdades, profissões, enem, engenharia civil, profissão, melhor faculdade em, estudante, escolher, orientação profissional, escolha, aprovação" />
+		<!-- Facebook -->
 		<meta property="og:url"                content="http://www.discipuluz.com/index.php" />
 		<meta property="og:type"               content="article" />
 		<meta property="og:title"              content="Perfil <?php echo utf8_encode($profile['initial']); ?>" />
@@ -83,7 +83,7 @@
 			</p>
 			<a href="./saibamais.php" target="_blank" class="button button-style1" style="margin-top: 2em; ">Se interessou? Saiba mais</a>
 			</div>
-			<div class="button-custom" style="margin: 0 auto"><a href="http://www.facebook.com/share.php?u=http://www.discipuluz.com/jungResultteste.php?resultado=<?php echo utf8_encode($profile['initial']); ?>" style="text-decoration: none"><img src="http://www.discipuluz.com/images/facebookicon.ico" style="width: 25%"><p style="color: grey">Compartilhar</p></a>
+			<div class="button-custom" style="margin: 0 auto"><a href="http://www.facebook.com/share.php?u=http://www.discipuluz.com/jungResult.php?resultado=<?php echo utf8_encode($profile['initial']); ?>" style="text-decoration: none"><img src="http://www.discipuluz.com/images/facebookicon.ico" style="width: 25%"><p style="color: grey">Compartilhar</p></a>
 		</div>
 	<!-- /Main -->
 
