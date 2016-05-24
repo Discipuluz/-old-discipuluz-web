@@ -63,27 +63,27 @@
 							<div class="col-xs-12 form-title">
 								Fale conosco
 							</div>
-							<div class="col-xs-12 form-field">
+							<div class="col-xs-12 form-text">
 								<div class="col-xs-1 form-field-arrow"></div>
-								<div class="col-xs-11 form-field-content">
+								<div class="col-xs-11 form-text-content">
 									<input id="nome" type="text" name="name" required />
-									<span class="form-field-bar"></span>
+									<span class="form-text-bar"></span>
 									<label>Qual seu nome?</label>
 								</div>
 							</div>
-							<div class="col-xs-12 form-field">
+							<div class="col-xs-12 form-text">
 								<div class="col-xs-1 form-field-arrow"></div>
-								<div class="col-xs-11 form-field-content">
+								<div class="col-xs-11 form-text-content">
 									<input id="email" type="email" name="email" required />
-									<span class="form-field-bar"></span>
+									<span class="form-text-bar"></span>
 									<label>Email</label>  
 								</div>
 							</div>
-							<div class="col-xs-12 form-field">
+							<div class="col-xs-12 form-text">
 								<div class="col-xs-1 form-field-arrow"></div>
-								<div class="col-xs-11 form-field-content">
+								<div class="col-xs-11 form-text-content">
 									<input id="comments" type="text" name="comments" />
-									<span class="form-field-bar"></span>
+									<span class="form-text-bar"></span>
 									<label>Comentários</label>
 								</div>
 							</div>

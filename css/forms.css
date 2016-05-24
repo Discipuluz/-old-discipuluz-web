@@ -9,11 +9,11 @@
 	background-color: rgb(251, 251, 251);
 }
 
-.form-card input, .form-card button{
+.form-card input:not([type="radio"]), .form-card button{
 	width: 100%;
 }
 
-.form-field-content{
+.form-text-content{
 	float: right;
 }
 
@@ -40,8 +40,8 @@
  *
  */
 .form-title{
-    margin-top: 0.5rem;
-    margin-bottom: 1.5rem;
+	margin-top: 0.5rem;
+	margin-bottom: 1.5rem;
 	font-size: 1.8rem;
 	color:#78B333;
 }
@@ -51,29 +51,28 @@
  *    TEXT FIELD    (FORM FIELD)
  *
  */
-.form-field{
+.form-text{
 	margin: 1rem 2rem 2rem 0;
 	padding-left: 0;
 	position:relative; 
 }
 
-.form-field input{
+.form-text input{
 	font-size: 1rem;
 	padding: 10px 10px 10px 5px;
-	display: block;
 	border: none;
 	border-bottom: 1px solid #757575;
-    background-color: inherit;
+	background-color: inherit;
 }
 
-.form-field input:focus{ 
+.form-text input:focus{ 
 	outline: none;
 }
 
 /* 
  * LABEL
  */
-.form-field label{
+.form-text label{
 	position: absolute;
 	top: 0;
 	color:#999999; 
@@ -86,18 +85,18 @@
 }
 
 /* invalid */
-.form-field input:invalid{
+.form-text input:invalid{
 	box-shadow: none;
 }
 
 /* invalid on focus */
-.form-field input:focus:invalid ~ label{
+.form-text input:focus:invalid ~ label{
 	color:rgb(241, 30, 30);
 }
 
 /* valid */
 /* on focus */
-.form-field input:focus ~ label, .form-field input:required:valid ~ label{
+.form-text input:focus ~ label, .form-text input:required:valid ~ label{
 	top: -1.2rem;
 	font-size: 0.8rem;
 	color:#78B333;
@@ -106,7 +105,7 @@
 /* 
  * BOTTOM BARS 
  */
-.form-field-bar{
+.form-text-bar{
 	position: relative;  
 	display: block; 
 	width: 0;
@@ -119,14 +118,14 @@
 }
 
 /* invalid on focus */
-.form-field input:focus:invalid ~ .form-field-bar{
+.form-text input:focus:invalid ~ .form-text-bar{
 	width: 100%;
 	background-color:rgb(241, 30, 30);
 }
 
 /* valid */
 /* on focus */
-.form-field input:focus ~ .form-field-bar, .form-field input:required:valid ~ .form-field-bar{
+.form-text input:focus ~ .form-text-bar, .form-text input:required:valid ~ .form-text-bar{
 	width: 100%;
 }
 
@@ -149,6 +148,7 @@
 	border: none;
 	border-radius: 2px;
 
+	width: 100%;
 	height: 3rem;
 	line-height: 2rem;
 	font-size: 0.9rem;
@@ -194,4 +194,31 @@
 .form-submit button:active:before {
 	width: 120%;
 	padding-top: 120%;
+}
+
+/***
+ *
+ *    RADIO BUTTON    (RADIO)
+ *
+ */
+ 
+.form-radio input[type=radio]:checked ~ label{
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+	background-color: #78B333;
+	color: white;
+}
+ 
+.form-radio label{
+	margin-bottom: 1rem;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	
+	border-radius: 2px;
+	
+	padding: 1rem;
+	
+	transition: all .2s linear;
 }
