@@ -23,11 +23,9 @@
 		<meta name="description" content="Descobra como você se comporta perante situações e atitudes, seus pontos fortes e possíveis áreas de autodesenvolvimento" />
 		<meta name="keywords" content="" />
 
-		<!-- Tem usar o nome da pessoa que respondeu como parâmetro para aparecer nessas tags? -->
-		<!-- Como alterar essa URL para cada um dos resultados?  <meta property="og:url"                content="http://www.discipuluz.com/indextest.php" />-->
 		<meta property="og:url"                content="http://www.discipuluz.com/jungResult.php?resultado=<?php echo utf8_encode($profile['initial']); ?>" />
 		<meta property="og:type"               content="article" />
-		<meta property="og:title"              content="Resultado do questionário de inclinações pessoais" />
+		<meta property="og:title"              content="Perfil <?php echo utf8_encode($profile['initial']); ?>" />
 		<meta property="og:description"        content="Descobra como você se comporta perante situações e atitudes, seus pontos fortes e possíveis áreas de autodesenvolvimento" />
 		<meta property="og:image"              content="http://www.discipuluz.com/images/fbcover.jpg" />
 		<meta property="og:site_name" 				 content="Discipuluz"/>
@@ -85,7 +83,7 @@
 			</p>
 			<a href="./saibamais.php" target="_blank" class="button button-style1" style="margin-top: 2em; ">Se interessou? Saiba mais</a>
 
-			<a class="button-custom" href="http://www.facebook.com/share.php?u=http://www.discipuluz.com/jungResultteste.php?resultado=<?php echo utf8_encode($profile['initial']); ?>"><img src="http://www.discipuluz.com/images/facebookicon.ico" style="width: 40%; margin-top: 1em; margin-left: 1.8em"><p style="color: grey">Compartilhar</p></a> 
+			<a class="button-custom" href="http://www.facebook.com/share.php?u=http://www.discipuluz.com/jungResultteste.php?resultado=<?php echo utf8_encode($profile['initial']); ?>"><img src="http://www.discipuluz.com/images/facebookicon.ico" style="width: 40%; margin-top: 1em; margin-left: 1.8em"><p style="color: grey">Compartilhar</p></a>
 			</div>
 		</div>
 	<!-- /Main -->
