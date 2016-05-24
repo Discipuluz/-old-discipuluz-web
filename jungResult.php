@@ -23,10 +23,10 @@
 		<meta name="description" content="Descubra como você se comporta perante situações e atitudes, seus pontos fortes e possíveis áreas de autodesenvolvimento" />
 		<meta name="keywords" content="Discipuluz, discipuluz, faculdade, vestibular, vestibulares, universidade, Enem, graduação, universidades, faculdades, profissões, enem, engenharia civil, profissão, melhor faculdade em, estudante, escolher, orientação profissional, escolha, aprovação" />
 		<!-- Facebook -->
-		<meta property="og:url"                content="http://www.discipuluz.com/index.php" />
+		<meta property="og:url"                content="http://www.discipuluz.com/jungResult.php" />
 		<meta property="og:type"               content="article" />
-		<meta property="og:title"              content="Perfil <?php echo utf8_encode($profile['initial']); ?>" />
-		<meta property="og:description"        content="Descobra como você se comporta perante situações e atitudes, seus pontos fortes e possíveis áreas de autodesenvolvimento" />
+		<meta property="og:title"              content="Perfil '.<?php echo utf8_encode($profile['initial']); ?>" />
+		<meta property="og:description"        content="Descubra como você se comporta perante situações e atitudes, seus pontos fortes e possíveis áreas de autodesenvolvimento" />
 		<meta property="og:image"              content="http://www.discipuluz.com/images/fbcover.jpg" />
 		<meta property="og:site_name" 				 content="Discipuluz"/>
 
