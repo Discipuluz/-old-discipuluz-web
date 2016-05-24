@@ -23,12 +23,13 @@
 		<meta name="description" content="Descubra como você se comporta perante situações e atitudes, seus pontos fortes e possíveis áreas de autodesenvolvimento" />
 		<meta name="keywords" content="Discipuluz, discipuluz, faculdade, vestibular, vestibulares, universidade, Enem, graduação, universidades, faculdades, profissões, enem, engenharia civil, profissão, melhor faculdade em, estudante, escolher, orientação profissional, escolha, aprovação" />
 		<!-- Facebook -->
-		<meta property="og:url"                content="http://www.discipuluz.com/jungResult.php?resultado=<?php echo utf8_encode($profile['initial']); ?>" />
+		<meta property="og:url"                content="http://www.discipuluz.com/index.php" />
 		<meta property="og:type"               content="article" />
-		<meta property="og:title"              content="Resultado do questionário de inclinações pessoais" />
+		<meta property="og:title"              content="Perfil <?php echo utf8_encode($profile['initial']); ?>" />
 		<meta property="og:description"        content="Descobra como você se comporta perante situações e atitudes, seus pontos fortes e possíveis áreas de autodesenvolvimento" />
 		<meta property="og:image"              content="http://www.discipuluz.com/images/fbcover.jpg" />
 		<meta property="og:site_name" 				 content="Discipuluz"/>
+
 		<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,700,500,900' rel='stylesheet' type='text/css'>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 		<script src="js/skel.min.js"></script>
@@ -42,13 +43,13 @@
 		<link rel="icon" href="../images/favicon.png">
 	</head>
 	<body class="homepage">
-	<?php include_once("analyticstracking.php") ?>
+
 	<?php include 'header.php' ?>
 
 
 	<!-- Main -->
 		<div id="main">
-			<div id="content" class="container">
+			<div id="content" class="container" style="margin-bottom: 1.5em">
 				<p  style="margin-bottom: 5em; font-size: 13pt	">O resultado abaixo apresenta suas tendências de ação frente a novas situações, seu modo de perceber as informações, seu estilo de julgamento e modo de organizar-se para dar conta de um trabalho.
 					Estas preferências compõem um perfil psicológico QUE NÃO É IMUTÁVEL.
 					Utilizamos em nosso trabalho a referência de Carl Jung, que em sua tipologia de personalidade buscou responder a estas tendências e preferências descritas acima.
@@ -81,8 +82,8 @@
 				<?php echo utf8_encode($profile['improvement']); ?>
 			</p>
 			<a href="./saibamais.php" target="_blank" class="button button-style1" style="margin-top: 2em; ">Se interessou? Saiba mais</a>
-			<a class="button-custom" href="http://www.facebook.com/share.php?u=http://www.discipuluz.com/jungResultteste.php?resultado=<?php echo utf8_encode($profile['initial']); ?>"><img src="http://www.discipuluz.com/images/facebookicon.ico" style="width: 40%; margin-top: 1em; margin-left: 1.8em"><p style="color: grey">Compartilhar</p></a>
 			</div>
+			<div class="button-custom" style="margin: 0 auto"><a href="http://www.facebook.com/share.php?u=http://www.discipuluz.com/jungResult.php?resultado=<?php echo utf8_encode($profile['initial']); ?>" style="text-decoration: none"><img src="http://www.discipuluz.com/images/facebookicon.ico" style="width: 25%"><p style="color: grey">Compartilhar</p></a></div>
 		</div>
 	<!-- /Main -->
 
