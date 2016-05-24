@@ -25,7 +25,7 @@
 		<!-- Facebook -->
 		<meta property="og:url"                content="http://www.discipuluz.com/jungResult.php" />
 		<meta property="og:type"               content="article" />
-		<meta property="og:title"              content="Perfil '.<?php echo utf8_encode($profile['initial']); ?>" />
+		<meta property="og:title"              content="Perfil <?php echo utf8_encode($profile['initial']); ?>" />
 		<meta property="og:description"        content="Descubra como você se comporta perante situações e atitudes, seus pontos fortes e possíveis áreas de autodesenvolvimento" />
 		<meta property="og:image"              content="http://www.discipuluz.com/images/fbcover.jpg" />
 		<meta property="og:site_name" 				 content="Discipuluz"/>
