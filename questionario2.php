@@ -97,11 +97,11 @@
 								}else{
 									echo "<div class='col-xs-12 col-md-offset-1 col-md-5 form-card'>";
 								}
-				                echo "<div class='col-xs-12 form-title'>".$row['orderId'].") ".$row['question'].'</div>';
+				                echo "<div class='col-xs-12 form-title'>".utf8_encode($row['orderId']).") ".utf8_encode($row['question']).'</div>';
 								echo "<div class='col-xs-1 form-field-arrow'></div>";
-								echo "<fieldset id=group".$row['orderId']." class='col-xs-12 form-radio'>";
-				                echo "<div class='form-radio-field'><input type='radio' id='question".$row['orderId']."-1' name='question".$row['orderId']."'value='A' class='col-xs-1' /><label for='question".$row['orderId']."-1' class='col-xs-11'>".$row['alternativeA'].'</label></div>';
-				                echo "<div class='form-radio-field'><input type='radio' id='question".$row['orderId']."-2' name='question". $row['orderId'] . "'value='B' class='col-xs-1' /><label for='question".$row['orderId']."-2' class='col-xs-11'>".$row['alternativeB'].'</label></div>';
+								echo "<fieldset id=group".utf8_encode($row['orderId'])." class='col-xs-12 form-radio'>";
+				                echo "<div class='form-radio-field'><input type='radio' id='question".utf8_encode($row['orderId'])."-1' name='question".utf8_encode($row['orderId'])."'value='A' class='col-xs-1' /><label for='question".utf8_encode($row['orderId'])."-1' class='col-xs-11'>".utf8_encode($row['alternativeA']).'</label></div>';
+				                echo "<div class='form-radio-field'><input type='radio' id='question".utf8_encode($row['orderId'])."-2' name='question". utf8_encode($row['orderId']) . "'value='B' class='col-xs-1' /><label for='question".utf8_encode($row['orderId'])."-2' class='col-xs-11'>".utf8_encode($row['alternativeB']).'</label></div>';
 				        		echo "</fieldset>";
 								echo "</div>";
 								if($cont % 2 == 1){
