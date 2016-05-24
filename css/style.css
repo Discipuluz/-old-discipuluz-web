@@ -288,6 +288,25 @@
 		color: #FFF !important;
 	}
 
+	.button-custom
+	{
+		width: 10%;
+		display: table;
+		margin-right: 2em;
+		/*padding: 0.8em 2em;*/
+		text-decoration: none !important;
+		font-size: 1.2em;
+		font-weight: 300;
+		color: #FFF !important;
+		-moz-transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out;
+		-webkit-transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out;
+		-o-transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out;
+		-ms-transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out;
+		transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out;
+		text-align: center;
+		border-radius: 0.25em;
+	}
+
 /*********************************************************************************/
 /* Icons                                                                         */
 /* Powered by Font Awesome by Dave Gandy | http://fontawesome.io                 */
