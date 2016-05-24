@@ -1,113 +1,132 @@
 .form-card{
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-    border-left: solid 5px #98D353;
-    padding: 1rem 0.5rem 2rem 0;
-    
-    background-color: rgb(251, 251, 251);
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	
+	border-left: solid 5px #98D353;
+	padding: 1rem 0.5rem 2rem 0;
+	
+	background-color: rgb(251, 251, 251);
 }
 
-.form-card input, .form-card button{
-    width: 100%;
+.form-card input:not([type="radio"]), .form-card button{
+	width: 100%;
 }
 
-.form-field-content{
-    float: right;
-}
-
-/***
- *
- *    TEXT FIELD    (FORM FIELD)
- *
- */
-.form-field{
-    margin: 1rem 2rem 2rem 0;
-    padding-left: 0;
-    position:relative; 
-}
-
-.form-field input{
-  font-size: 1rem;
-  padding: 10px 10px 10px 5px;
-  display: block;
-  border: none;
-  border-bottom: 1px solid #757575;
-}
-
-.form-field input:focus{ 
-    outline: none;
-}
-
-/* 
- * LABEL
- */
-.form-field label{
-  position: absolute;
-  top: 0;
-  color:#999999; 
-  font-size: 1.2rem;
-  font-weight: normal;
-  pointer-events: none;
-  transition: 0.2s ease all; 
-  -moz-transition: 0.2s ease all; 
-  -webkit-transition: 0.2s ease all;
-}
-
-.form-field input:invalid{
-  box-shadow: none;
-}
-
-.form-field input:focus:invalid ~ label{
-  color:rgb(241, 30, 30);
-}
-
-/* active state */
-.form-field input:focus ~ label, .form-field input:required:valid ~ label{
-  top: -1.2rem;
-  font-size: 0.8rem;
-  color:#78B333;
-}
-
-/* 
- * BOTTOM BARS 
- */
-.form-field-bar{
-    position: relative;  
-    display: block; 
-    width: 0;
-    height: 3px;
-    bottom: 1px; 
-    background:#78B333; 
-    transition:0.2s ease all; 
-    -moz-transition:0.2s ease all; 
-    -webkit-transition:0.2s ease all;
-}
-
-
-.form-field input:focus:invalid ~ .form-field-bar{
-  width: 100%;
-  background-color:rgb(241, 30, 30);
-}
-
-/* active state */
-.form-field input:focus ~ .form-field-bar, .form-field input:required:valid ~ .form-field-bar{
-  width: 100%;
+.form-text-content{
+	float: right;
 }
 
 /*
  * FORM ARROW
  */
 .form-field-arrow{
-    float: left;
-    
-    margin-top: 1rem;
-    
-    border-top: 0.5rem solid transparent;
-    border-bottom: 0.5rem solid transparent;
-  
-    border-left: 0.5rem solid #98D353;
-    
-    width: 0; 
-    height: 0; 
+	float: left;
+	
+	margin-top: 1rem;
+	
+	border-top: 0.5rem solid transparent;
+	border-bottom: 0.5rem solid transparent;
+	
+	border-left: 0.5rem solid #98D353;
+	
+	width: 0; 
+	height: 0; 
+}
+
+/***
+ *
+ *    TITlE    (FORM TITLE)
+ *
+ */
+.form-title{
+	margin-top: 0.5rem;
+	margin-bottom: 1.5rem;
+	font-size: 1.8rem;
+	color:#78B333;
+}
+ 
+/***
+ *
+ *    TEXT FIELD    (FORM FIELD)
+ *
+ */
+.form-text{
+	margin: 1rem 2rem 2rem 0;
+	padding-left: 0;
+	position:relative; 
+}
+
+.form-text input{
+	font-size: 1rem;
+	padding: 10px 10px 10px 5px;
+	border: none;
+	border-bottom: 1px solid #757575;
+	background-color: inherit;
+}
+
+.form-text input:focus{ 
+	outline: none;
+}
+
+/* 
+ * LABEL
+ */
+.form-text label{
+	position: absolute;
+	top: 0;
+	color:#999999; 
+	font-size: 1.2rem;
+	font-weight: normal;
+	pointer-events: none;
+	transition: 0.2s ease all; 
+	-moz-transition: 0.2s ease all; 
+	-webkit-transition: 0.2s ease all;
+}
+
+/* invalid */
+.form-text input:invalid{
+	box-shadow: none;
+}
+
+/* invalid on focus */
+.form-text input:focus:invalid ~ label{
+	color:rgb(241, 30, 30);
+}
+
+/* valid */
+/* on focus */
+.form-text input:focus ~ label, .form-text input:required:valid ~ label{
+	top: -1.2rem;
+	font-size: 0.8rem;
+	color:#78B333;
+}
+
+/* 
+ * BOTTOM BARS 
+ */
+.form-text-bar{
+	position: relative;  
+	display: block; 
+	width: 0;
+	height: 3px;
+	bottom: 1px; 
+	background:#78B333; 
+	transition:0.2s ease all; 
+	-moz-transition:0.2s ease all; 
+	-webkit-transition:0.2s ease all;
+}
+
+/* invalid on focus */
+.form-text input:focus:invalid ~ .form-text-bar{
+	width: 100%;
+	background-color:rgb(241, 30, 30);
+}
+
+/* valid */
+/* on focus */
+.form-text input:focus ~ .form-text-bar, .form-text input:required:valid ~ .form-text-bar{
+	width: 100%;
 }
 
 /***
@@ -117,61 +136,95 @@
  */
  
 .form-submit button{
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-   
-  position: relative;
-   
-  cursor: pointer;
-  
-  overflow: hidden;
-  
-  outline: none;
-  border: none;
-  border-radius: 2px;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+	 
+	position: relative;
+	 
+	cursor: pointer;
+	
+	overflow: hidden;
+	
+	outline: none;
+	border: none;
+	border-radius: 2px;
 
-  height: 3rem;
-  line-height: 2rem;
-  font-size: 0.9rem;
-  
-  padding: 0;
+	width: 100%;
+	height: 3rem;
+	line-height: 2rem;
+	font-size: 0.9rem;
+	
+	padding: 0;
 
-  background-color: #78B333;
-  color: #fff;
+	background-color: #78B333;
+	color: #fff;
 
-  transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  transition: background 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+	transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+	transition: background 0.1s cubic-bezier(0.4, 0, 0.2, 1);
 }
  
 .form-submit button:hover, .form-submit button:focus{
-  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-  background-color: #589313;
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+	background-color: #589313;
 }
 
 .form-submit button:before {
-  content: "";
-  
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  
-  display: block;
-  width: 0;
-  padding-top: 0;
-    
-  border-radius: 100%;
-  
-  background-color: rgba(236, 240, 241, .3);
-  
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  
-  transition: width .2s ease-out, padding-top .2s ease-out;
+	content: "";
+	
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	
+	display: block;
+	width: 0;
+	padding-top: 0;
+	
+	border-radius: 100%;
+	
+	background-color: rgba(236, 240, 241, .3);
+	
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	
+	transition: width .2s ease-out, padding-top .2s ease-out;
 }
 
 .form-submit button:active:before {
-  width: 120%;
-  padding-top: 120%;
+	width: 120%;
+	padding-top: 120%;
+}
+
+/***
+ *
+ *    RADIO BUTTON    (RADIO)
+ *
+ */
+ 
+.form-radio input[type=radio]:not(:checked):hover ~ label{
+	background-color: rgb(210, 210, 210);
+}
+
+.form-radio input[type=radio]:checked ~ label{
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+	background-color: #78B333;
+	color: white;
+}
+ 
+.form-radio label{
+	cursor: pointer;
+	
+	margin-bottom: 1rem;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	
+	border-radius: 2px;
+	
+	padding: 1rem;
+	
+	transition: all .2s linear;
 }

@@ -8,6 +8,15 @@
 	<head>
 		<title>Discipuluz - Contato</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="Elogios, dúvidas, pedidos, críticas, feedbacks em geral. Conversem com a gente!" />
+		<meta name="keywords" content="Discipuluz, discipuluz, faculdade, vestibular, vestibulares, universidade, Enem, graduação, universidades, faculdades, profissões, enem, engenharia civil, profissão, melhor faculdade em, estudante, escolher, orientação profissional, escolha, aprovação" />
+		<!-- Facebook -->
+		<meta property="og:url"                content="http://www.discipuluz.com/contato.php" />
+		<meta property="og:type"               content="article" />
+		<meta property="og:title"              content="Discipuluz - Fale com a gente" />
+		<meta property="og:description"        content="Elogios, dúvidas, pedidos, críticas, feedbacks em geral. Conversem com a gente!" />
+		<meta property="og:image"              content="http://www.discipuluz.com/images/fbcover.jpg" />
+		<meta property="og:site_name" 				 content="Discipuluz"/>
 		
 		<!-- jQuery -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
@@ -51,27 +60,30 @@
 					<!--iframe src="https://docs.google.com/forms/d/1o2hsOCjYX5jLlsKxkQeB4Dfa0Oumtm4qxMX37tLgyNQ/viewform" width="100%" height="1050" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe-->
 					<form action="register.php" method="post" onsubmit="return validateEmail()">
 						<div class="col-xs-12 col-md-5 form-card">
-							<div class="col-xs-12 form-field">
+							<div class="col-xs-12 form-title">
+								Fale conosco
+							</div>
+							<div class="col-xs-12 form-text">
 								<div class="col-xs-1 form-field-arrow"></div>
-								<div class="col-xs-11 form-field-content">
+								<div class="col-xs-11 form-text-content">
 									<input id="nome" type="text" name="name" required />
-									<span class="form-field-bar"></span>
+									<span class="form-text-bar"></span>
 									<label>Qual seu nome?</label>
 								</div>
 							</div>
-							<div class="col-xs-12 form-field">
+							<div class="col-xs-12 form-text">
 								<div class="col-xs-1 form-field-arrow"></div>
-								<div class="col-xs-11 form-field-content">
-									<input id="email" type="text" name="email" required />
-									<span class="form-field-bar"></span>
+								<div class="col-xs-11 form-text-content">
+									<input id="email" type="email" name="email" required />
+									<span class="form-text-bar"></span>
 									<label>Email</label>  
 								</div>
 							</div>
-							<div class="col-xs-12 form-field">
+							<div class="col-xs-12 form-text">
 								<div class="col-xs-1 form-field-arrow"></div>
-								<div class="col-xs-11 form-field-content">
-									<input id="comments" type="email" name="comments" />
-									<span class="form-field-bar"></span>
+								<div class="col-xs-11 form-text-content">
+									<input id="comments" type="text" name="comments" />
+									<span class="form-text-bar"></span>
 									<label>Comentários</label>
 								</div>
 							</div>
@@ -90,7 +102,7 @@
 		<div id="tweet">
 			<div class="container">
 				<section>
-					<blockquote>&ldquo;In posuere eleifend odio. Quisque semper augue mattis wisi. Maecenas ligula. Pellentesque viverra vulputate enim. Aliquam erat volutpat.&rdquo;</blockquote>
+					<blockquote>&ldquo;Os nossos maiores problemas não estão nos obstáculos do caminho, mas na escolha da direção errada.&rdquo; </br>Augusto Cury</blockquote>
 				</section>
 			</div>
 		</div>

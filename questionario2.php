@@ -8,8 +8,23 @@
 	<head>
 		<title>Discipuluz - Questionário</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
+		<meta name="description" content="Descubra como você se comporta perante situações e atitudes, seus pontos fortes e possíveis áreas de autodesenvolvimento" />
+		<meta name="keywords" content="questionário, autoconhecimento, Discipuluz, discipuluz, personalidade" />
+		<!-- Facebook -->
+		<meta property="og:url"                content="http://www.discipuluz.com/questionario.php" />
+		<meta property="og:type"               content="article" />
+		<meta property="og:title"              content="Discipuluz - Questionario de inclinações pessoais" />
+		<meta property="og:description"        content="Descobra como você se comporta perante situações e atitudes, seus pontos fortes e possíveis áreas de autodesenvolvimento" />
+		<meta property="og:image"              content="http://www.discipuluz.com/images/fbcover.jpg" />
+		<meta property="og:site_name" 				 content="Discipuluz"/>
+		<!-- jQuery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+		
+		<!-- Bootstrap -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+		
+		<!-- Other -->
 		<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,700,500,900' rel='stylesheet' type='text/css'>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 		<script src="js/skel.min.js"></script>
@@ -20,6 +35,7 @@
 			<link rel="stylesheet" href="css/style.css" />
 			<link rel="stylesheet" href="css/style-desktop.css" />
 		</noscript>
+		<link rel="stylesheet" href="css/forms.css" />
 		<script type="text/javascript">
 		function calculateResult() {
 			var size = $("#questionario > fieldset").length;
@@ -70,20 +86,38 @@
 				<?php
 					include 'database.php';
 				    	$pdo = Database::connect();
+						
 				        $sql = 'SELECT * FROM Jung_Questions ORDER BY orderId ASC';
 				        echo "<div id='questionario'>";
+						$cont = 0;
 						foreach ($pdo->query($sql) as $row) {
-				                echo utf8_encode($row['orderId']).") ".utf8_encode($row['question']).'<br />';
-								echo "<fieldset id=group".$row['orderId'].">";
-				                echo "<input type='radio' name='question". $row['orderId'] . "'value='A'>".utf8_encode($row['alternativeA']).'</input><br />';
-				                echo "<input type='radio' name='question". $row['orderId'] . "'value='B'>".utf8_encode($row['alternativeB']).'</input><br /><br />';
+								if($cont % 2 == 0){
+									echo "<div class='col-xs-12'>";
+									echo "<div class='col-xs-12 col-md-5 form-card'>";
+								}else{
+									echo "<div class='col-xs-12 col-md-offset-1 col-md-5 form-card'>";
+								}
+				                echo "<div class='col-xs-12 form-title'>".$row['orderId'].") ".$row['question'].'</div>';
+								echo "<div class='col-xs-1 form-field-arrow'></div>";
+								echo "<fieldset id=group".$row['orderId']." class='col-xs-12 form-radio'>";
+				                echo "<div class='form-radio-field'><input type='radio' id='question".$row['orderId']."-1' name='question".$row['orderId']."'value='A' class='col-xs-1' /><label for='question".$row['orderId']."-1' class='col-xs-11'>".$row['alternativeA'].'</label></div>';
+				                echo "<div class='form-radio-field'><input type='radio' id='question".$row['orderId']."-2' name='question". $row['orderId'] . "'value='B' class='col-xs-1' /><label for='question".$row['orderId']."-2' class='col-xs-11'>".$row['alternativeB'].'</label></div>';
 				        		echo "</fieldset>";
+								echo "</div>";
+								if($cont % 2 == 1){
+									echo "</div>";
+								}
+								$cont++;
 				        }
 				        echo "</div>";
 						Database::disconnect();
 				?>
+				<div class="col-xs-12 form-submit" style="margin-top: 4rem;">
+					<div class="col-xs-12 col-md-offset-4 col-md-3">
+						<button onclick="calculateResult()" type="submit">Enviar</button>
+					</div>
+				</div>
 			</div>
-			<input type="button" onclick="calculateResult()" value="Enviar">
 		</div>
 	<!-- /Main -->
 
