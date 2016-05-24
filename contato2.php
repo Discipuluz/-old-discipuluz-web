@@ -60,6 +60,9 @@
 					<!--iframe src="https://docs.google.com/forms/d/1o2hsOCjYX5jLlsKxkQeB4Dfa0Oumtm4qxMX37tLgyNQ/viewform" width="100%" height="1050" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe-->
 					<form action="register.php" method="post" onsubmit="return validateEmail()">
 						<div class="col-xs-12 col-md-5 form-card">
+							<div class="col-xs-12 form-title">
+								Fale conosco
+							</div>
 							<div class="col-xs-12 form-field">
 								<div class="col-xs-1 form-field-arrow"></div>
 								<div class="col-xs-11 form-field-content">
@@ -71,7 +74,7 @@
 							<div class="col-xs-12 form-field">
 								<div class="col-xs-1 form-field-arrow"></div>
 								<div class="col-xs-11 form-field-content">
-									<input id="email" type="text" name="email" required />
+									<input id="email" type="email" name="email" required />
 									<span class="form-field-bar"></span>
 									<label>Email</label>  
 								</div>
@@ -79,7 +82,7 @@
 							<div class="col-xs-12 form-field">
 								<div class="col-xs-1 form-field-arrow"></div>
 								<div class="col-xs-11 form-field-content">
-									<input id="comments" type="email" name="comments" />
+									<input id="comments" type="text" name="comments" />
 									<span class="form-field-bar"></span>
 									<label>Comentários</label>
 								</div>
