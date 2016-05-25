@@ -19,11 +19,11 @@
 		<meta property="og:site_name" 				 content="Discipuluz"/>
 		<!-- jQuery -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
-		
+
 		<!-- Bootstrap -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-		
+
 		<!-- Other -->
 		<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,700,500,900' rel='stylesheet' type='text/css'>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
@@ -69,7 +69,7 @@
 		       type: 'POST',
 		       data: { 'numbersResult': results, 'stringResult': stringResult} ,
 		       success: function (response) {
-						 window.location = "http://www.discipuluz.com/jungResult.php?resultado="+stringResult;
+						 window.location = "http://www.discipuluz.com/jungResult.php?resultado="+stringResult+"&id="+response;
 		       }
 		   });
 		}
@@ -86,7 +86,7 @@
 				<?php
 					include 'database.php';
 				    	$pdo = Database::connect();
-						
+
 				        $sql = 'SELECT * FROM Jung_Questions ORDER BY orderId ASC';
 				        echo "<div id='questionario'>";
 						$cont = 0;
