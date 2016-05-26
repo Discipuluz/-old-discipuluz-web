@@ -18,24 +18,7 @@
 		<meta property="og:image"              content="http://www.discipuluz.com/images/fbcover.jpg" />
 		<meta property="og:site_name" 				 content="Discipuluz"/>
 		
-		<!-- jQuery -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
-		
-		<!-- Bootstrap -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-		
-		<!-- Other -->
-		<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,700,500,900' rel='stylesheet' type='text/css'>
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-		<script src="js/skel.min.js"></script>
-		<script src="js/skel-panels.min.js"></script>
-		<script src="js/init.js"></script>
-		<noscript>
-			<link rel="stylesheet" href="css/skel-noscript.css" />
-			<link rel="stylesheet" href="css/style.css" />
-			<link rel="stylesheet" href="css/style-desktop.css" />
-		</noscript>
+		<?php include 'styles.php' ?>
 		<link rel="stylesheet" href="css/forms.css" />
 		<link rel="stylesheet" href="css/contato.css" />
 		<link rel="icon" href="images/favicon.png">
@@ -110,5 +93,7 @@
 
 		<?php include 'footer.php' ?>
 
+		<?php include 'scripts.php' ?>
+		
 	</body>
 </html>
