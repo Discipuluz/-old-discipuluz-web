@@ -23,7 +23,7 @@
 .form-field-arrow{
 	float: left;
 	
-	margin-top: 1rem;
+	margin: 1rem 0 0 0;
 	
 	border-top: 0.5rem solid transparent;
 	border-bottom: 0.5rem solid transparent;
@@ -33,6 +33,18 @@
 	width: 0; 
 	height: 0; 
 }
+/*
+ * FORM SEPARATOR
+ */
+.form-field-separator{
+	float: left;
+	
+	margin: 1.5rem 0 0 -2rem;
+	
+	height: 1px;
+	
+	background-color: #98D353; 
+}
 
 /***
  *
@@ -40,8 +52,9 @@
  *
  */
 .form-title{
-	margin-top: 0.5rem;
-	margin-bottom: 1.5rem;
+	margin-top: 0.9rem;
+	margin-bottom: 1.3rem;
+	
 	font-size: 1.8rem;
 	color:#78B333;
 }
@@ -201,18 +214,48 @@
  *    RADIO BUTTON    (RADIO)
  *
  */
+
+.form-radio input[type=radio]{
+	display: none;
+}
  
-.form-radio input[type=radio]:not(:checked):hover ~ label{
+.form-radio input[type=radio]:hover ~ .form-radio-button{
+	background-color: rgb(210, 210, 210);
+}
+ 
+.form-radio .form-radio-button{
+	cursor: pointer;
+	
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	
+	border-radius: 6px 0 0 6px;
+	
+	padding-top: 0.6rem;
+	padding-bottom: 0.6rem;
+	
+	color: #589313;
+	font-weight: bold;
+	
+	transition: all .2s linear;
+}
+ 
+.form-radio input[type=radio]:not(:checked):hover ~ .form-radio-label{
 	background-color: rgb(210, 210, 210);
 }
 
-.form-radio input[type=radio]:checked ~ label{
+.form-radio input[type=radio]:checked ~ .form-radio-label{
 	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+	
+	border-radius: 2px;
 	background-color: #78B333;
 	color: white;
 }
  
-.form-radio label{
+.form-radio .form-radio-label{
 	cursor: pointer;
 	
 	margin-bottom: 1rem;
@@ -222,7 +265,7 @@
 	-ms-user-select: none;
 	user-select: none;
 	
-	border-radius: 2px;
+	border-radius: 0 2px 2px 2px;
 	
 	padding: 1rem;
 	

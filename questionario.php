@@ -8,29 +8,79 @@
 	<head>
 		<title>Discipuluz - Questionário</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
-		<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,700,500,900' rel='stylesheet' type='text/css'>
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-		<script src="js/skel.min.js"></script>
-		<script src="js/skel-panels.min.js"></script>
-		<script src="js/init.js"></script>
-		<noscript>
-			<link rel="stylesheet" href="css/skel-noscript.css" />
-			<link rel="stylesheet" href="css/style.css" />
-			<link rel="stylesheet" href="css/style-desktop.css" />
-		</noscript>
+		<meta name="description" content="Descubra como você se comporta perante situações e atitudes, seus pontos fortes e possíveis áreas de autodesenvolvimento" />
+		<meta name="keywords" content="questionário, autoconhecimento, Discipuluz, discipuluz, personalidade" />
+		<!-- Facebook -->
+		<meta property="og:url"                content="http://www.discipuluz.com/questionario.php" />
+		<meta property="og:type"               content="article" />
+		<meta property="og:title"              content="Discipuluz - Questionario de inclinações pessoais" />
+		<meta property="og:description"        content="Descobra como você se comporta perante situações e atitudes, seus pontos fortes e possíveis áreas de autodesenvolvimento" />
+		<meta property="og:image"              content="http://www.discipuluz.com/images/fbcover.jpg" />
+		<meta property="og:site_name" 				 content="Discipuluz"/>
+		
+		<?php include 'styles.php' ?>
+	
+		<link rel="stylesheet" href="css/forms.css" />
+		<script type="text/javascript">
+		</script>
+		<link rel="stylesheet" href="css/questionario.css" />
 		<link rel="icon" href="images/favicon.png">
 	</head>
 	<body>
-
+	<?php include_once("analyticstracking.php") ?>
 	<?php include 'header.php' ?>
 
 	<!-- Main -->
 		<div id="main">
 			<div id="content" class="container">
-				<section>
-					<iframe src="https://docs.google.com/forms/d/1dWIBcEi3L3g_S4OSrOsc3F-S6nk8P-OWeQ2DH05zO04/viewform?embedded=true" width="100%" height="1550" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>
+				<form id='questionario'>
+					
+					<?php
+						include 'database.php';
+							$pdo = Database::connect();
+							
+							$sql = 'SELECT * FROM Jung_Questions ORDER BY orderId ASC';
+							$cont = -1;
+							for($i = 0; $i <= 1; $i++){
+								if($i == 0)
+									echo "<div class='col-xs-12 col-md-5'>";
+								else
+									echo "<div class='col-xs-12 col-md-offset-1 col-md-5'>";
+								foreach ($pdo->query($sql) as $row) {
+										$cont++;
+										if($cont % 2 != $i){
+											continue;
+										}
+										echo ""
+										."<div class='col-xs-12 form-card'>"
+											."<span class='question-number'>".$row['orderId']."</span>"
+											."<br />"
+											."<div class='col-xs-12 form-title'>".$row['question']."</div>"
+											."<div class='col-xs-1 form-field-arrow'></div>"
+											."<fieldset id=group".$row['orderId']." class='col-xs-12 form-radio'>"
+												."<div class='form-radio-field'>"
+													."<input type='radio' id='question".$row['orderId']."-1' name='question".$row['orderId']."'value='A' required/>"
+													."<label for='question".$row['orderId']."-1' class='col-xs-1 form-radio-button'>a</label>"
+													."<label for='question".$row['orderId']."-1' class='col-xs-11 form-radio-label'>".$row['alternativeA']."</label>"
+												."</div>"
+												."<div class='form-radio-field'>"
+													."<input type='radio' id='question".$row['orderId']."-2' name='question".$row['orderId']."'value='B' />"
+													."<label for='question".$row['orderId']."-2' class='col-xs-1 form-radio-button'>b</label>"
+													."<label for='question".$row['orderId']."-2' class='col-xs-11 form-radio-label'>".$row['alternativeB']."</label>"
+												."</div>"
+											."</fieldset>"
+										."</div>";
+								}
+								echo "</div>";
+							}
+							Database::disconnect();
+					?>
+					<div class="col-xs-12 form-submit" style="margin-top: 4rem;">
+						<div class="col-xs-12 col-md-offset-4 col-md-3">
+							<button type="submit">Enviar</button>
+						</div>
+					</div>
+				</form>
 			</div>
 		</div>
 	<!-- /Main -->
@@ -46,7 +96,9 @@
 	<!-- /Tweet -->
 
 	<?php include 'footer.php' ?>
-
-
+	
+	<?php include 'scripts.php' ?>
+	<script src="js/questionario.js"></script>
+	
 	</body>
 </html>
