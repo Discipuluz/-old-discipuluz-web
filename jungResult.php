@@ -83,6 +83,16 @@
 			</p>
 			<a href="./saibamais.php" target="_blank" class="button button-style1" style="margin-top: 2em; ">Se interessou? Saiba mais</a>
 			</div>
+
+			<!-- Feedback de resposta-->
+			<div class="col-xs-12 form-submit" style="margin-top: 4rem;">
+				<textarea id="feedback" placeholder="Escreva aqui seu feedback" rows="5" cols="50"></textarea>
+				<input id="indication" type='range' min='1' max='10' step='1' value='5' />
+				<div class="col-xs-12 col-md-offset-4 col-md-3">
+					<button onclick="saveFeedback()" type="submit">Enviar Feedback</button>
+				</div>
+			</div>
+
 			<div class="button-custom" style="margin: 0 auto"><a href="http://www.facebook.com/share.php?u=http://www.discipuluz.com/jungResult.php?resultado=<?php echo utf8_encode($profile['initial']); ?>" style="text-decoration: none"><img src="http://www.discipuluz.com/images/facebookicon.ico" style="width: 25%"><p style="color: grey">Compartilhar</p></a></div>
 		</div>
 	<!-- /Main -->
@@ -98,6 +108,24 @@
 	<!-- /Tweet -->
 
 	<?php include 'footer.php' ?>
+
+	<script>
+		function saveFeedback(){
+			var feedback = $("#feedback").val();
+			var indication = $("#indication").val();
+			var id = location.search.split('id=')[1];
+			$.ajax({
+		       url: 'saveFeedback.php',
+		       type: 'POST',
+		       data: { 'feedback': feedback, 'indication': indication, 'id': id} ,
+		       success: function (response){
+						 alert("Obrigado pelo feedback!");
+					 }
+		   });
+
+		}
+
+	</script>
 
 	</body>
 </html>
