@@ -115,7 +115,7 @@
 			var indication = $("#indication").val();
 			var id = location.search.split('id=')[1];
 			$.ajax({
-		       url: 'saveFeedback.php',
+		       url: 'ajax/saveFeedback.php',
 		       type: 'POST',
 		       data: { 'feedback': feedback, 'indication': indication, 'id': id} ,
 		       success: function (response){
