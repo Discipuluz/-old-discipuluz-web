@@ -18,9 +18,12 @@
 		<meta property="og:image"              content="http://www.discipuluz.com/images/fbcover.jpg" />
 		<meta property="og:site_name" 				 content="Discipuluz"/>
 		
+		<?php include 'scripts.php' ?>
 		<?php include 'styles.php' ?>
+		
 		<link rel="stylesheet" href="css/forms.css" />
 		<link rel="stylesheet" href="css/contato.css" />
+		<script src="js/forms.js" />
 		<link rel="icon" href="images/favicon.png">
 		<script type="text/javascript">
 		function validateEmail() {
@@ -92,8 +95,6 @@
 		<!-- /Tweet -->
 
 		<?php include 'footer.php' ?>
-
-		<?php include 'scripts.php' ?>
 		
 	</body>
 </html>

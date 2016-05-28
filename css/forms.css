@@ -1,3 +1,8 @@
+/**
+ * FORMS EUHUIEDWLNFCLEWLJ<
+ * GAMBIARRAS ;-;
+ */
+
 .form-card{
 	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 	margin-top: 2rem;
@@ -33,6 +38,7 @@
 	width: 0; 
 	height: 0; 
 }
+
 /*
  * FORM SEPARATOR
  */
@@ -58,6 +64,15 @@
 	font-size: 1.8rem;
 	color:#78B333;
 }
+
+.form-subtitle{
+	margin-top: -1rem;
+	margin-bottom: 1rem;
+	color:#999999; 
+	font-size: 1.2rem;
+	font-weight: normal;
+	pointer-events: none;
+}
  
 /***
  *
@@ -67,7 +82,7 @@
 .form-text{
 	margin: 1rem 2rem 2rem 0;
 	padding-left: 0;
-	position:relative; 
+	position:relative;
 }
 
 .form-text input{
@@ -80,6 +95,15 @@
 
 .form-text input:focus{ 
 	outline: none;
+}
+
+/* radio */
+.form-radio input[type=radio]:checked ~ label input{
+	border-bottom-color: rgb(241, 241, 241);
+}
+
+.form-radio input[type=radio] ~ label input{
+	margin-left: 0;
 }
 
 /* 
@@ -103,16 +127,32 @@
 }
 
 /* invalid on focus */
-.form-text input:focus:invalid ~ label{
+.form-text input.invalid:focus ~ label,
+.form-text input.filled.invalid ~ label{
 	color:rgb(241, 30, 30);
 }
 
 /* valid */
 /* on focus */
-.form-text input:focus ~ label, .form-text input:required:valid ~ label{
+.form-text input:focus ~ label, 
+.form-text input.filled ~ label{
 	top: -1.2rem;
 	font-size: 0.8rem;
+}
+
+.form-text input.valid ~ label{
 	color:#78B333;
+}
+
+/* radio */
+.form-radio input[type=radio]:checked ~ label .form-text input ~ label,
+.form-radio input[type=radio]:checked ~ label .form-text input.valid ~ label{
+	color: rgb(241, 241, 241);
+}
+
+.form-radio input[type=radio]:checked ~ label .form-text input,
+.form-radio input[type=radio]:checked ~ label .form-text input.valid{
+	color: rgb(241, 241, 241);
 }
 
 /* 
@@ -130,15 +170,22 @@
 	-webkit-transition:0.2s ease all;
 }
 
+.form-radio input[type=radio]:checked ~ label .form-text-bar{
+	background-color: rgb(241, 241, 241);
+}
+
 /* invalid on focus */
-.form-text input:focus:invalid ~ .form-text-bar{
+.form-text input.invalid:focus ~ .form-text-bar,
+.form-text input.invalid.filled ~ .form-text-bar{
 	width: 100%;
 	background-color:rgb(241, 30, 30);
 }
 
 /* valid */
 /* on focus */
-.form-text input:focus ~ .form-text-bar, .form-text input:required:valid ~ .form-text-bar{
+.form-text input:focus ~ .form-text-bar, 
+.form-text input.valid ~ .form-text-bar,
+.form-text input.filled ~ .form-text-bar{
 	width: 100%;
 }
 
@@ -219,7 +266,7 @@
 	display: none;
 }
  
-.form-radio input[type=radio]:hover ~ .form-radio-button{
+.form-radio .form-radio-field:hover > .form-radio-button{
 	background-color: rgb(210, 210, 210);
 }
  
@@ -243,7 +290,8 @@
 	transition: all .2s linear;
 }
  
-.form-radio input[type=radio]:not(:checked):hover ~ .form-radio-label{
+.form-radio input[type=radio]:not(:checked) ~ .form-radio-button:hover ~ .form-radio-label,
+.form-radio input[type=radio]:not(:checked) ~ .form-radio-label:hover{
 	background-color: rgb(210, 210, 210);
 }
 
