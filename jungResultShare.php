@@ -81,7 +81,7 @@
 				<i>Possíveis áreas de autodesenvolvimento:</i></span></br>
 				<?php echo utf8_encode($profile['improvement']); ?>
 			</p>
-			<a href="./questionario2.php" target="_blank" class="button button-style1" style="margin-top: 2em; ">Gostou? Faça aqui o seu questionário</a>
+			<a href="./questionario.php" target="_blank" class="button button-style1" style="margin-top: 2em; ">Gostou? Faça aqui o seu questionário</a>
 			</div>
 		</div>
 	<!-- /Main -->

@@ -23,7 +23,7 @@
 		<meta name="description" content="Descubra como você se comporta perante situações e atitudes, seus pontos fortes e possíveis áreas de autodesenvolvimento" />
 		<meta name="keywords" content="Discipuluz, discipuluz, faculdade, vestibular, vestibulares, universidade, Enem, graduação, universidades, faculdades, profissões, enem, engenharia civil, profissão, melhor faculdade em, estudante, escolher, orientação profissional, escolha, aprovação" />
 		<!-- Facebook -->
-		<meta property="og:url"                content="http://www.discipuluz.com/jungResultShare.php" />
+		<meta property="og:url"                content="http://www.discipuluz.com/jungResult.php" />
 		<meta property="og:type"               content="article" />
 		<meta property="og:title"              content="Resultado de Inclinações Pessoais" />
 		<meta property="og:description"        content="Descubra como você se comporta perante situações e atitudes, seus pontos fortes e possíveis áreas de autodesenvolvimento" />
@@ -93,7 +93,7 @@
 				</div>
 			</div>
 
-			<div class="button-custom" style="margin: 0 auto"><a href="http://www.facebook.com/share.php?u=http://www.discipuluz.com/jungResultShare.php?resultado=<?php echo utf8_encode($profile['initial']); ?>" style="text-decoration: none"><img src="http://www.discipuluz.com/images/facebookicon.ico" style="width: 25%"><p style="color: grey">Compartilhar</p></a></div>
+			<div class="button-custom" style="margin: 0 auto"><a href="http://www.facebook.com/share.php?u=http://www.discipuluz.com/jungResult.php?resultado=<?php echo utf8_encode($profile['initial']); ?>" style="text-decoration: none"><img src="http://www.discipuluz.com/images/facebookicon.ico" style="width: 25%"><p style="color: grey">Compartilhar</p></a></div>
 		</div>
 	<!-- /Main -->
 
