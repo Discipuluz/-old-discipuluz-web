@@ -8,3 +8,8 @@
     font-size: 1.3rem;
     font-weight: bolder;
 }
+
+#questionario-desktop, 
+#questionario-mobile{
+    transition: opacity 2s;
+}
