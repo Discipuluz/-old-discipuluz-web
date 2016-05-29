@@ -1,5 +1,9 @@
 <?php
 	if(!empty($_POST)){
+		$name = $_POST["name"];
+		$school = $_POST["school"];
+		$grade = $_POST["grade"];
+		$email = $_POST["email"];
 		$numbersResult = $_POST["numbersResult"];
 		$stringResult = $_POST["stringResult"];
 
@@ -11,7 +15,7 @@
   	    sensorial, intuitivo, racional, emotivo, analitico, perspicaz, result)
 		values(?,?,?,?,?,?,?,?,?,?,?,?,?)";
 		$q = $pdo->prepare($sql);
-		$q->execute(array("Tests Novo","emailTeste","1", "escola",
+		$q->execute(array($name, $email, $grade, $school,
 		$numbersResult[0], $numbersResult[1], $numbersResult[2], $numbersResult[3],
 		$numbersResult[4], $numbersResult[5], $numbersResult[6], $numbersResult[7],
 		$stringResult));

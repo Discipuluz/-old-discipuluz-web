@@ -2,17 +2,21 @@ $(function(){
     var stringResult = '';
 
     /**
-     * On questionario form submit 
+     * On questionario form submit
      */
     $('#questionario-desktop').on('submit', submitQuestions)
     $('#questionario-mobile').on('submit', submitQuestions)
-    
+
     function submitQuestions() {
+        var name = $("#user-name").val();
+        var school = $("#user-school").val();
+        var grade = $("#user-grade").val();
+        var email = $("#email").val();
         var size = $("#questionario > fieldset").length;
         var results = new Array();
         var pos = 0;
         results = [0,0,0,0,0,0,0,0];
-        
+
         for (var i = 1; i <= 4; i++) {
             for(var j = i; j<=28; j+=4){
                 if($('input[name=question'+j+']:checked').val() == 'A'){
@@ -33,42 +37,46 @@ $(function(){
         }
 
         $.ajax({
-            url: 'saveAnswer.php',
+            url: 'ajax/saveAnswer.php',
             type: 'POST',
-            data: { 
-                'numbersResult': results, 
+            data: {
+                'name': name,
+                'school': school,
+                'grade': grade,
+                'email': email,
+                'numbersResult': results,
                 'stringResult': stringResult
             },
-            success: function (response) {
-                showFormUser(stringResult)
+            success: function (idAnswer) {
+                showFormUser(stringResult, idAnswer)
             }
         })
-        
+
         return false;
     }
-    
+
     /**
      * Shows 2nd form (user) - with animation
      */
-    function showFormUser(){
+    function showFormUser(stringResult, idAnswer){
         var body = $("html, body")
         $('#questionario-desktop').addClass('invisible')
         $('#questionario-mobile').addClass('invisible')
-        
-        setTimeout(function(){    
+
+        setTimeout(function(){
             $('#questionario-desktop').addClass('hidden')
             $('#questionario-mobile').addClass('hidden')
-        
-            $('#questionario-user').removeClass('hidden')  
+
+            $('#questionario-user').removeClass('hidden')
         }, 1000)
-        
-        //window.location = "http://www.discipuluz.com/jungResult.php?resultado="+stringResult
+
+        window.location = "http://www.discipuluz.com/jungResult.php?resultado="+stringResult+"&id="+idAnswer;
     }
-    
+
     /**
      * MISC
      */
-    
+
     //
     $('#user-grade-other-text').on('input', function(){
         $('#user-grade-other').prop('checked', true);

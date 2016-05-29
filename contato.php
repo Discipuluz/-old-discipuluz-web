@@ -17,10 +17,10 @@
 		<meta property="og:description"        content="Elogios, dúvidas, pedidos, críticas, feedbacks em geral. Conversem com a gente!" />
 		<meta property="og:image"              content="http://www.discipuluz.com/images/fbcover.jpg" />
 		<meta property="og:site_name" 				 content="Discipuluz"/>
-		
+
 		<?php include 'scripts.php' ?>
 		<?php include 'styles.php' ?>
-		
+
 		<link rel="stylesheet" href="css/forms.css" />
 		<link rel="stylesheet" href="css/contato.css" />
 		<script src="js/forms.js" />
@@ -62,7 +62,7 @@
 								<div class="col-xs-11 form-text-content">
 									<input id="email" type="email" name="email" required />
 									<span class="form-text-bar"></span>
-									<label>Email</label>  
+									<label>Email</label>
 								</div>
 							</div>
 							<div class="col-xs-12 form-text">
@@ -95,6 +95,6 @@
 		<!-- /Tweet -->
 
 		<?php include 'footer.php' ?>
-		
+
 	</body>
 </html>
