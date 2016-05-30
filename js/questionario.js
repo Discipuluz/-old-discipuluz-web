@@ -62,15 +62,6 @@ $(function(){
             grade = $("input[name=user-grade]:checked").val(),
             email = $("#user-email").val()
         
-        console.log({
-            'name': name,
-            'school': school,
-            'grade': grade,
-            'email': email,
-            'numbersResult': results,
-            'stringResult': stringResult
-        })
-        
         $.ajax({
             url: 'ajax/saveAnswer.php',
             type: 'POST',
