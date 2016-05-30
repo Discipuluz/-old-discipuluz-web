@@ -137,6 +137,7 @@
 								<input id="user-name" type="text" name="user-name" required />
 								<span class="form-text-bar"></span>
 								<label for="user-nome">Qual seu nome?</label>
+								<div class="form-text-error form-text-error-hidden">Insira seu nome</div>
 							</div>
 						</div>
 						<div class="col-xs-12 form-text">
@@ -145,6 +146,7 @@
 								<input id="user-school" type="text" name="user-school" required />
 								<span class="form-text-bar"></span>
 								<label for="user-school">Nome da escola onde estuda</label>  
+								<div class="form-text-error form-text-error-hidden">Insira sua escola</div>
 							</div>
 						</div>
 						<div class="col-xs-1 form-field-arrow"></div>
@@ -182,13 +184,15 @@
 									</label>
 								</div>
 							</fieldset>
+							<div class="form-text-error form-text-error-hidden">Insira sua série</div>
 						</div>
 						<div class="col-xs-12 form-text">
 							<div class="col-xs-1 form-field-arrow"></div>
 							<div class="col-xs-11 form-text-content">
 								<input id="user-email" type="email" name="email" required />
 								<span class="form-text-bar"></span>
-								<label>Seu Email</label>  
+								<label>Seu Email</label>
+								<div class="form-text-error form-text-error-hidden">Insira um email válido</div>
 							</div>
 						</div>
 						<div class="col-xs-12 form-submit">

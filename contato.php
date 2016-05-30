@@ -47,6 +47,7 @@
 									<input id="user-name" type="text" name="name" required />
 									<span class="form-text-bar"></span>
 									<label>Qual seu nome?</label>
+									<div class="form-text-error form-text-error-hidden">Insira seu nome</div>
 								</div>
 							</div>
 							<div class="col-xs-12 form-text">
@@ -55,6 +56,7 @@
 									<input id="user-email" type="email" name="email" required />
 									<span class="form-text-bar"></span>
 									<label>Email</label>
+									<div class="form-text-error form-text-error-hidden">Insira um email válido</div>
 								</div>
 							</div>
 							<div class="col-xs-12 form-text">

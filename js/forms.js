@@ -56,14 +56,34 @@ $(function(){
         console.log($(this).val())
         $(this).parent().parent().find('.form-range-meter').text($(this).val())
     }
+    
+    /**
+     * Validation
+     */
+    $('.form-card input, .form-card textarea').on('blur', function(){
+        if(!validate($(this))){
+            $(this).addClass('filled').addClass('invalid')
+        }
+    })
 })
 
-function validate($form){
+function validateForm($form){
     var result = true
     $form.find('input, textarea').each(function(){
-        if($(this).hasClass('invalid')){
-            result = false;
+        if(!validate($(this))){
+            result = false
         }
     })
     return result
+}
+
+function validate($input){
+    if($input.hasClass('invalid')){
+        $input.parent().find('.form-text-error').removeClass('form-text-error-hidden')
+        return false
+    }else{
+        console.log('wut?')
+        $input.parent().find('.form-text-error').addClass('form-text-error-hidden')
+        return true
+    }
 }

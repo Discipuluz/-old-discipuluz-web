@@ -1,6 +1,6 @@
 $(function(){    
     $('#form-contato').on('submit', function(){
-        if(validate($('#form-contato'))){ //forms.validate
+        if(validateForm($('#form-contato'))){ //forms.validate
             var name = $("#user-name").val(),
                 email = $("#user-email").val(),
                 comments = $("#user-comments").val()

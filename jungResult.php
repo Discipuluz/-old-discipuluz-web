@@ -96,7 +96,7 @@
 							<div class="col-xs-12 form-text">
 								<div class="col-xs-1 form-field-arrow"></div>
 								<div class="col-xs-11 form-text-content">
-									<textarea id="user-feedback" name="comments" rows="1" required></textarea>
+									<textarea id="user-feedback" name="comments" rows="1"></textarea>
 									<span class="form-text-bar"></span>
 									<label>Escreva aqui seu feedback</label>
 								</div>

@@ -104,7 +104,7 @@
 	font-weight: normal;
 	pointer-events: none;
 }
- 
+
 /***
  *
  *    TEXT FIELD    (FORM FIELD)
@@ -251,6 +251,29 @@
 	width: 100%;
 }
 
+/*
+ * Error Message
+ */
+.form-text-error{
+	position: relative; 
+	width: 100%;
+	
+	text-align: center;
+	line-height: 1rem;
+	font-size: 1rem;
+	font-weight: bold;
+	color:rgb(241, 30, 30);
+	 
+	transition: all 1s ease; 
+	-moz-transition: all 1s ease; 
+	-webkit-transition: all 1s ease;
+}
+
+.form-text-error-hidden{
+	display: none;
+	height: 0;
+}
+ 
 /***
  *
  *    SUBMIT BUTTON    (FORM SUBMIT)
@@ -331,7 +354,7 @@
 .form-radio .form-radio-field:hover > .form-radio-button{
 	background-color: rgb(210, 210, 210);
 }
- 
+
 .form-radio .form-radio-button{
 	cursor: pointer;
 	
@@ -383,7 +406,9 @@
 }
 
 /**
+ *
  *		SLIDER		(RANGE)
+ *
  */
  
 .form-range {
