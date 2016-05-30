@@ -33,6 +33,17 @@ $(function(){
             }
         }
     }
+    
+    /**
+     * Resize Text areas
+     */
+    $('textarea').on('input', resizeTextArea)
+    $('textarea').each(resizeTextArea)
+    
+    function resizeTextArea(){
+        $(this).css('height', 'auto')
+        $(this).css('height', $(this).prop('scrollHeight') + 1 + 'px')
+    }
 })
     
 function validate($form){

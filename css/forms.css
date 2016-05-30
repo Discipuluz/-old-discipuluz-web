@@ -115,20 +115,28 @@
 	position:relative;
 }
 
-.form-text input{
+.form-text input, 
+.form-text textarea{
 	font-size: 1rem;
+	width: 100%;
 	padding: 10px 10px 10px 5px;
 	border: none;
 	border-bottom: 1px solid #757575;
 	background-color: inherit;
 }
 
-.form-text input:focus{ 
+.form-text textarea{
+	resize: none;
+}
+
+.form-text input:focus, 
+.form-text textarea:focus{ 
 	outline: none;
 }
 
 /* radio */
-.form-radio input[type=radio]:checked ~ label input{
+.form-radio input[type=radio]:checked ~ label input, 
+.form-radio input[type=radio]:checked ~ label textarea{
 	border-bottom-color: rgb(241, 241, 241);
 }
 
@@ -153,36 +161,46 @@
 }
 
 /* invalid */
-.form-text input:invalid{
+.form-text input:invalid,
+.form-text textarea:invalid{
 	box-shadow: none;
 }
 
 /* invalid on focus */
 .form-text input.invalid:focus ~ label,
-.form-text input.filled.invalid ~ label{
+.form-text input.filled.invalid ~ label,
+.form-text textarea.invalid:focus ~ label,
+.form-text textarea.filled.invalid ~ label{
 	color:rgb(241, 30, 30);
 }
 
 /* valid */
 /* on focus */
 .form-text input:focus ~ label, 
-.form-text input.filled ~ label{
+.form-text input.filled ~ label,
+.form-text textarea:focus ~ label, 
+.form-text textarea.filled ~ label{
 	top: -1.2rem;
 	font-size: 0.8rem;
 }
 
-.form-text input.valid ~ label{
+.form-text input.valid ~ label,
+.form-text textarea.valid ~ label{
 	color:#78B333;
 }
 
 /* radio */
 .form-radio input[type=radio]:checked ~ label .form-text input ~ label,
-.form-radio input[type=radio]:checked ~ label .form-text input.valid ~ label{
+.form-radio input[type=radio]:checked ~ label .form-text input.valid ~ label,
+.form-radio input[type=radio]:checked ~ label .form-text textarea ~ label,
+.form-radio input[type=radio]:checked ~ label .form-text textarea.valid ~ label{
 	color: rgb(241, 241, 241);
 }
 
 .form-radio input[type=radio]:checked ~ label .form-text input,
-.form-radio input[type=radio]:checked ~ label .form-text input.valid{
+.form-radio input[type=radio]:checked ~ label .form-text input.valid,
+.form-radio input[type=radio]:checked ~ label .form-text textarea,
+.form-radio input[type=radio]:checked ~ label .form-text textarea.valid{
 	color: rgb(241, 241, 241);
 }
 
@@ -193,12 +211,19 @@
 	position: relative;  
 	display: block; 
 	width: 0;
-	height: 3px;
-	bottom: 1px; 
+	height: 3px; 
 	background:#78B333; 
 	transition:0.2s ease all; 
 	-moz-transition:0.2s ease all; 
 	-webkit-transition:0.2s ease all;
+}
+
+.form-text input ~ .form-text-bar{
+	bottom: 1px;
+} 
+
+.form-text textarea ~ .form-text-bar{
+	bottom: 6px;
 }
 
 .form-radio input[type=radio]:checked ~ label .form-text-bar{
@@ -207,7 +232,9 @@
 
 /* invalid on focus */
 .form-text input.invalid:focus ~ .form-text-bar,
-.form-text input.invalid.filled ~ .form-text-bar{
+.form-text input.invalid.filled ~ .form-text-bar
+.form-text textarea.invalid:focus ~ .form-text-bar,
+.form-text textarea.invalid.filled ~ .form-text-bar{
 	width: 100%;
 	background-color:rgb(241, 30, 30);
 }
@@ -216,7 +243,10 @@
 /* on focus */
 .form-text input:focus ~ .form-text-bar, 
 .form-text input.valid ~ .form-text-bar,
-.form-text input.filled ~ .form-text-bar{
+.form-text input.filled ~ .form-text-bar,
+.form-text textarea:focus ~ .form-text-bar, 
+.form-text textarea.valid ~ .form-text-bar,
+.form-text textarea.filled ~ .form-text-bar{
 	width: 100%;
 }
 
