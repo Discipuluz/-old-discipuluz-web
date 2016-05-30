@@ -15,6 +15,9 @@ $(function(){
                 },
                 success: function () {
                     $('.form-card-container').addClass('flipped')
+                },
+                error: function(jqXHR, status){
+                    console.log(status)
                 }
             })
         }
