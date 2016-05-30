@@ -7,9 +7,9 @@
 		$numbersResult = $_POST["numbersResult"];
 		$stringResult = $_POST["stringResult"];
 
-		include 'database.php';
-    $pdo = Database::connect();
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+		include '../database.php';
+		$pdo = Database::connect();
+		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 		$sql = "INSERT INTO Jung_Answers (name,email,serie, school, extrovertido, introvertido,
   	    sensorial, intuitivo, racional, emotivo, analitico, perspicaz, result)

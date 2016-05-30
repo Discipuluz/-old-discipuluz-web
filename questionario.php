@@ -126,7 +126,7 @@
 						</div>
 					</div>
 				</form>
-				<form action="" method="post" id="questionario-user" class="hidden">
+				<form action="saveAnswer.php" method="post" id="questionario-user" class="hidden">
 					<div class="col-xs-12 col-md-5 form-card">
 						<div class="col-xs-12 form-title">
 							Sobre Você
@@ -154,23 +154,23 @@
 							</div>
 							<fieldset class='col-xs-11 form-radio'>
 								<div class="form-radio-field col-md-12">
-									<input id="user-grade-1" type="radio" name="user-grade" required/>
+									<input id="user-grade-1" type="radio" name="user-grade" value="1" required/>
 									<label for="user-grade-1" class='col-xs-12 form-radio-label'>1° ano</label>
 								</div>
 								<div class="form-radio-field col-md-12">
-									<input id="user-grade-2" type="radio" name="user-grade"/>
+									<input id="user-grade-2" type="radio" name="user-grade" value="2" />
 									<label for="user-grade-2" class='col-xs-12 form-radio-label'>2° ano</label>
 								</div>
 								<div class="form-radio-field col-md-12">
-									<input id="user-grade-3" type="radio" name="user-grade"/>
+									<input id="user-grade-3" type="radio" name="user-grade" value="3" />
 									<label for="user-grade-3" class='col-xs-12 form-radio-label'>3° ano</label>
 								</div>
 								<div class="form-radio-field col-md-12">
-									<input id="user-grade-c" type="radio" name="user-grade"/>
+									<input id="user-grade-c" type="radio" name="user-grade" value="c" />
 									<label for="user-grade-c" class='col-xs-12 form-radio-label'>Cursinho</label>
 								</div>
 								<div class="form-radio-field col-md-12">
-									<input id="user-grade-other" type="radio" name="user-grade"/>
+									<input id="user-grade-other" type="radio" name="user-grade" value="o" />
 									<label for="user-grade-other" class='col-xs-12 form-radio-label'>
 										<div class="col-xs-12 form-text">
 											<div class="col-xs-11 form-text-content">
@@ -186,7 +186,7 @@
 						<div class="col-xs-12 form-text">
 							<div class="col-xs-1 form-field-arrow"></div>
 							<div class="col-xs-11 form-text-content">
-								<input id="email" type="email" name="email" required />
+								<input id="user-email" type="email" name="email" required />
 								<span class="form-text-bar"></span>
 								<label>Seu Email</label>  
 							</div>

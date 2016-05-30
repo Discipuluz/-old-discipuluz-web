@@ -1,19 +1,15 @@
 $(function(){
-    var stringResult = '';
+    var stringResult = '',
+        results = new Array();
 
     /**
      * On questionario form submit
      */
     $('#questionario-desktop').on('submit', submitQuestions)
     $('#questionario-mobile').on('submit', submitQuestions)
-
+            
     function submitQuestions() {
-        var name = $("#user-name").val();
-        var school = $("#user-school").val();
-        var grade = $("#user-grade").val();
-        var email = $("#email").val();
-        var size = $("#questionario > fieldset").length;
-        var results = new Array();
+        var size = $("#questionario > fieldset").length
         var pos = 0;
         results = [0,0,0,0,0,0,0,0];
 
@@ -35,30 +31,16 @@ $(function(){
                 stringResult += charsResult[i*2 + 1]
             }
         }
+        
+        showFormUser()
 
-        $.ajax({
-            url: 'ajax/saveAnswer.php',
-            type: 'POST',
-            data: {
-                'name': name,
-                'school': school,
-                'grade': grade,
-                'email': email,
-                'numbersResult': results,
-                'stringResult': stringResult
-            },
-            success: function (idAnswer) {
-                showFormUser(stringResult, idAnswer)
-            }
-        })
-
-        return false;
+        return false
     }
 
     /**
      * Shows 2nd form (user) - with animation
      */
-    function showFormUser(stringResult, idAnswer){
+    function showFormUser(){
         var body = $("html, body")
         $('#questionario-desktop').addClass('invisible')
         $('#questionario-mobile').addClass('invisible')
@@ -69,9 +51,47 @@ $(function(){
 
             $('#questionario-user').removeClass('hidden')
         }, 1000)
-
-        window.location = "http://www.discipuluz.com/jungResult.php?resultado="+stringResult+"&id="+idAnswer;
     }
+    
+    /**
+     * Submits last form
+     */
+    $('#questionario-user').on('submit', function(){
+        var name = $("#user-name").val(),
+            school = $("#user-school").val(),
+            grade = $("input[name=user-grade]:checked").val(),
+            email = $("#user-email").val()
+        
+        console.log({
+            'name': name,
+            'school': school,
+            'grade': grade,
+            'email': email,
+            'numbersResult': results,
+            'stringResult': stringResult
+        })
+        
+        $.ajax({
+            url: 'ajax/saveAnswer.php',
+            type: 'POST',
+            data: {
+                name: name,
+                school: school,
+                grade: grade,
+                email: email,
+                numbersResult: results,
+                stringResult: stringResult
+            },
+            success: function (idAnswer) {
+                window.location = "/jungResult.php?resultado=" + stringResult + "&id=" + idAnswer;
+            },
+            error: function(jqXHR, status){
+                console.log(status)
+            }
+        })
+        
+        return false
+    })
 
     /**
      * MISC
