@@ -23,18 +23,9 @@
 
 		<link rel="stylesheet" href="css/forms.css" />
 		<link rel="stylesheet" href="css/contato.css" />
-		<script src="js/forms.js" />
-		<link rel="icon" href="images/favicon.png">
-		<script type="text/javascript">
-		function validateEmail() {
-			var email = document.getElementById("email").value;
-		    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-		    if(!re.test(email)){
-		    	alert("Insira um email válido!");
-		   	}
-		    return re.test(email);
-		}
-		</script>
+		<script src="js/forms.js"></script>
+		<script src="js/contato.js"></script>
+		<link rel="icon" href="images/favicon.png" />
 	</head>
 	<body>
 
@@ -43,16 +34,17 @@
 		<!-- Main -->
 		<div id="main">
 			<div id="content" class="container">
+				<div id="content" class="col-xs-12 col-md-6 form-card-container">
 					<!--iframe src="https://docs.google.com/forms/d/1o2hsOCjYX5jLlsKxkQeB4Dfa0Oumtm4qxMX37tLgyNQ/viewform" width="100%" height="1050" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe-->
-					<form action="register.php" method="post" onsubmit="return validateEmail()">
-						<div class="col-xs-12 col-md-5 form-card">
+					<form id="form-contato" action="register.php" method="post">
+						<div class="col-xs-12 form-card">
 							<div class="col-xs-12 form-title">
 								Fale conosco
 							</div>
 							<div class="col-xs-12 form-text">
 								<div class="col-xs-1 form-field-arrow"></div>
 								<div class="col-xs-11 form-text-content">
-									<input id="nome" type="text" name="name" required />
+									<input id="user-name" type="text" name="name" required />
 									<span class="form-text-bar"></span>
 									<label>Qual seu nome?</label>
 								</div>
@@ -60,15 +52,15 @@
 							<div class="col-xs-12 form-text">
 								<div class="col-xs-1 form-field-arrow"></div>
 								<div class="col-xs-11 form-text-content">
-									<input id="email" type="email" name="email" required />
+									<input id="user-email" type="email" name="email" required />
 									<span class="form-text-bar"></span>
-									<label>Email</label>
+									<label>Email</label>  
 								</div>
 							</div>
 							<div class="col-xs-12 form-text">
 								<div class="col-xs-1 form-field-arrow"></div>
 								<div class="col-xs-11 form-text-content">
-									<input id="comments" type="text" name="comments" />
+									<input id="user-comments" type="text" name="comments" />
 									<span class="form-text-bar"></span>
 									<label>Comentários</label>
 								</div>
@@ -80,6 +72,15 @@
 							</div>
 						</div>
 					</form>
+					<div class="col-xs-12 form-card form-card-back" style="margin-top: -22rem;">
+						<div class="col-xs-12 form-title">
+							Obrigado por sua mensagem.
+						</div>
+						<div class="col-xs-12 form-message">
+							A Discipuluz entrará em contato em breve
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 		<!-- /Main -->

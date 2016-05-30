@@ -3,6 +3,29 @@
  * GAMBIARRAS ;-;
  */
 
+.form-card-container{
+	perspective: 800px;
+}
+
+.form-card-container.flipped .form-card{
+	transform-style: preserve-3d;
+}
+
+.form-card-container.flipped .form-card:not(.form-card-back){
+	-webkit-transform: rotateY(180deg); /* Safari */
+    transform: rotateY(180deg); /* Standard syntax */
+}
+
+.form-card-back{
+	-webkit-transform: rotateY(180deg); /* Safari */
+    transform: rotateY(180deg); /* Standard syntax */
+}
+
+.form-card-container.flipped .form-card.form-card-back{
+	-webkit-transform: rotateY(360deg); /* Safari */
+    transform: rotateY(360deg); /* Standard syntax */
+}
+
 .form-card{
 	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 	margin-top: 2rem;
@@ -12,6 +35,13 @@
 	padding: 1rem 0.5rem 2rem 0;
 	
 	background-color: rgb(251, 251, 251);
+	
+	transition: transform 1s linear 0s;
+	backface-visibility: hidden;
+}
+
+.form-card-hidden{
+	visibility: hidden;
 }
 
 .form-card input:not([type="radio"]), .form-card button{

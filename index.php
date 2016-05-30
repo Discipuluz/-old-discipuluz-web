@@ -17,7 +17,8 @@
 		<meta property="og:description"        content="Conheça mais sobre cursos, faculdades e universidades. Faça nosso questionário e começe sua pesquisa para uma carreira feliz" />
 		<meta property="og:image"              content="http://www.discipuluz.com/images/fbcover.jpg" />
 		<meta property="og:site_name" 				 content="Discipuluz"/>
-		
+
+		<?php include 'scripts.php' ?>
 		<?php include 'styles.php' ?>
 		
 		<link rel="icon" href="images/favicon.png">
@@ -104,8 +105,6 @@
 		</div>
 
 	<?php include 'footer.php' ?>
-
-	<?php include 'scripts.php' ?>
 	
 	</body>
 </html>

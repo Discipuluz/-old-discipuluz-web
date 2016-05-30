@@ -34,3 +34,13 @@ $(function(){
         }
     }
 })
+    
+function validate($form){
+    var result = true
+    $form.find('input').each(function(){
+        if($(this).hasClass('invalid')){
+            result = false;
+        }
+    })
+    return result
+}
