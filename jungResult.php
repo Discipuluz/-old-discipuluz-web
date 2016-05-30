@@ -30,17 +30,16 @@
 		<meta property="og:image"              content="http://www.discipuluz.com/images/fbcover.jpg" />
 		<meta property="og:site_name" 				 content="Discipuluz"/>
 
-		<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,700,500,900' rel='stylesheet' type='text/css'>
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-		<script src="js/skel.min.js"></script>
-		<script src="js/skel-panels.min.js"></script>
-		<script src="js/init.js"></script>
-		<noscript>
-			<link rel="stylesheet" href="css/skel-noscript.css" />
-			<link rel="stylesheet" href="css/style.css" />
-			<link rel="stylesheet" href="css/style-desktop.css" />
-		</noscript>
-		<link rel="icon" href="../images/favicon.png">
+		<?php include 'scripts.php' ?>
+		<?php include 'styles.php' ?>
+		
+		<link rel="stylesheet" href="css/forms.css" />
+		<script src="js/forms.js"></script>
+		
+		<script src="js/jungResult.js"></script>
+		<link rel="stylesheet" href="css/jungResult.css" />
+		
+		<link rel="icon" href="images/favicon.png" />
 	</head>
 	<body class="homepage">
 
@@ -63,37 +62,80 @@
 				<p style="text-align: left; font-size: 15pt">
 					Título:  <?php echo utf8_encode($profile['title']); ?>
 				</p>
-			</br>
-			<p style="text-align: left; font-size: 15pt">
-				Palavras-chave: <?php echo utf8_encode($profile['keyword']); ?>
-			</p>
-			</br>
-			<p style="text-align: left; font-size: 15pt; margin-left: 1em">
-				<?php echo utf8_encode($profile['description']); ?>
-			</p>
-			</br>
-			<p style="text-align: left; font-size: 15pt;"><span style="color: #99D353">
-				<i>Seus pontos fortes:</i></span></br>
-				<?php echo utf8_encode($profile['strong']); ?>
-			</p>
-			</br>
-			<p style="text-align: left; font-size: 15pt"><span style="color: #99D353">
-				<i>Possíveis áreas de autodesenvolvimento:</i></span></br>
-				<?php echo utf8_encode($profile['improvement']); ?>
-			</p>
-			<a href="./saibamais.php" target="_blank" class="button button-style1" style="margin-top: 2em; ">Se interessou? Saiba mais</a>
-			</div>
-
-			<!-- Feedback de resposta-->
-			<div class="col-xs-12 form-submit" style="margin-top: 4rem;">
-				<textarea id="feedback" placeholder="Escreva aqui seu feedback" rows="5" cols="50"></textarea>
-				<input id="indication" type='range' min='1' max='10' step='1' value='5' />
-				<div class="col-xs-12 col-md-offset-4 col-md-3">
-					<button onclick="saveFeedback()" type="submit">Enviar Feedback</button>
+				</br>
+				<p style="text-align: left; font-size: 15pt">
+					Palavras-chave: <?php echo utf8_encode($profile['keyword']); ?>
+				</p>
+				</br>
+				<p style="text-align: left; font-size: 15pt; margin-left: 1em">
+					<?php echo utf8_encode($profile['description']); ?>
+				</p>
+				</br>
+				<p style="text-align: left; font-size: 15pt;"><span style="color: #99D353">
+					<i>Seus pontos fortes:</i></span></br>
+					<?php echo utf8_encode($profile['strong']); ?>
+				</p>
+				</br>
+				<p style="text-align: left; font-size: 15pt"><span style="color: #99D353">
+					<i>Possíveis áreas de autodesenvolvimento:</i></span></br>
+					<?php echo utf8_encode($profile['improvement']); ?>
+				</p>
+				<a href="./saibamais.php" target="_blank" class="button button-style1" style="margin-top: 2em; ">Se interessou? Saiba mais</a>
+				<br />
+			
+				<!-- 
+				  -- Feedback de resposta
+				  -->
+				  
+				<div class="col-xs-12 col-md-offset-3 col-md-6 form-card-container">
+					<form id="form-feedback" action="register.php" method="post">
+						<div class="col-xs-12 form-card">
+							<div class="col-xs-12 form-title">
+								O que achou?
+							</div>
+							<div class="col-xs-12 form-text">
+								<div class="col-xs-1 form-field-arrow"></div>
+								<div class="col-xs-11 form-text-content">
+									<textarea id="user-feedback" name="comments" rows="1" required></textarea>
+									<span class="form-text-bar"></span>
+									<label>Escreva aqui seu feedback</label>
+								</div>
+							</div>
+							<div class="col-xs-1 form-field-arrow"></div>
+							<div class="col-xs-12">
+								<div class="col-xs-12 form-subtitle">
+									<span class="form-range-meter">
+										5
+									</span>
+									Uma nota para nós
+								</div>
+								<div class="col-xs-offset-1 col-xs-11">
+									<input type="range" id="user-indication" class="form-range" min="0" max="10" step="1" value="5" required/>
+								</div>
+							</div>
+							<div class="col-xs-12 form-submit">
+								<div class="col-xs-12 col-md-offset-8 col-md-4">
+									<button type="submit">Enviar Feedback</button>
+								</div>
+							</div>
+						</div>
+					</form>
+					<div class="col-xs-12 form-card form-card-back" style="margin-top: -22rem;">
+						<div class="col-xs-12 form-title">
+							Obrigado pelo feedback
+						</div>
+						<div class="col-xs-12 form-message">
+							A Discipuluz levará em conta sua opinião para seu melhor atendimento :) 
+						</div>
+					</div>
 				</div>
 			</div>
-
-			<div class="button-custom" style="margin: 0 auto"><a href="http://www.facebook.com/share.php?u=http://www.discipuluz.com/jungResult.php?resultado=<?php echo utf8_encode($profile['initial']); ?>" style="text-decoration: none"><img src="http://www.discipuluz.com/images/facebookicon.ico" style="width: 25%"><p style="color: grey">Compartilhar</p></a></div>
+			<div class="button-custom" style="margin: 0 auto">
+				<a href="http://www.facebook.com/share.php?u=http://www.discipuluz.com/jungResult.php?resultado=<?php echo utf8_encode($profile['initial']); ?>" style="text-decoration: none">
+					<img src="http://www.discipuluz.com/images/facebookicon.ico" style="width: 25%">
+					<p style="color: grey">Compartilhar</p>
+				</a>
+			</div>
 		</div>
 	<!-- /Main -->
 
@@ -108,24 +150,6 @@
 	<!-- /Tweet -->
 
 	<?php include 'footer.php' ?>
-
-	<script>
-		function saveFeedback(){
-			var feedback = $("#feedback").val();
-			var indication = $("#indication").val();
-			var id = location.search.split('id=')[1];
-			$.ajax({
-		       url: 'ajax/saveFeedback.php',
-		       type: 'POST',
-		       data: { 'feedback': feedback, 'indication': indication, 'id': id} ,
-		       success: function (response){
-						 alert("Obrigado pelo feedback!");
-					 }
-		   });
-
-		}
-
-	</script>
 
 	</body>
 </html>

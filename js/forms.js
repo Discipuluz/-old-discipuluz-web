@@ -1,7 +1,7 @@
 $(function(){
     
-    $('input').each(inputClass)
-    $('input').on('input', inputClass)
+    $('input, textarea').each(inputClass)
+    $('input, textarea').on('input', inputClass)
     
     function inputClass(){
         //filled
@@ -44,11 +44,23 @@ $(function(){
         $(this).css('height', 'auto')
         $(this).css('height', $(this).prop('scrollHeight') + 1 + 'px')
     }
-})
     
+    /**
+     * Update ranges meters
+     */
+    $('.form-range').on('input', updateRangeMeters)
+    $('.form-range').on('change', updateRangeMeters)
+    $('.form-range').each(updateRangeMeters)
+    
+    function updateRangeMeters(){
+        console.log($(this).val())
+        $(this).parent().parent().find('.form-range-meter').text($(this).val())
+    }
+})
+
 function validate($form){
     var result = true
-    $form.find('input').each(function(){
+    $form.find('input, textarea').each(function(){
         if($(this).hasClass('invalid')){
             result = false;
         }
