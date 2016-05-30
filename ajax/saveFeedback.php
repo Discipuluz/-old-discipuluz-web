@@ -4,7 +4,7 @@
 		$indication = $_POST["indication"];
     $idAnswer= $_POST["id"];
 
-		include 'database.php';
+		include '../database.php';
     $pdo = Database::connect();
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
