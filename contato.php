@@ -79,7 +79,7 @@
 							Obrigado por sua mensagem.
 						</div>
 						<div class="col-xs-12 form-message">
-							A Discipuluz entrará em contato em breve
+							A Discipuluz agradece o seu contato :)
 						</div>
 					</div>
 				</div>

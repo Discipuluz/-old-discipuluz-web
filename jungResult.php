@@ -125,7 +125,7 @@
 							Obrigado pelo feedback
 						</div>
 						<div class="col-xs-12 form-message">
-							A Discipuluz levará em conta sua opinião para seu melhor atendimento :) 
+							A Discipuluz agradece pelo feedback :) 
 						</div>
 					</div>
 				</div>
