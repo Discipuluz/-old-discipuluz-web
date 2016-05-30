@@ -42,15 +42,22 @@ $(function(){
      */
     function showFormUser(){
         var body = $("html, body")
-        $('#questionario-desktop').addClass('invisible')
-        $('#questionario-mobile').addClass('invisible')
-
-        setTimeout(function(){
+        $('#questionario-desktop, #questionario-mobile').css({
+            opacity: 0,
+            height: '20rem'
+        })
+        body.stop().animate({
+            scrollTop: 500
+        }, '500', 'swing', function() {
             $('#questionario-desktop').addClass('hidden')
             $('#questionario-mobile').addClass('hidden')
-
+            
+            $('#questionario-user').css('opacity', 0)
             $('#questionario-user').removeClass('hidden')
-        }, 1000)
+            $('#questionario-user').animate({
+                opacity: 1 
+            }, 1000)
+        })
     }
     
     /**
