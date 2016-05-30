@@ -54,7 +54,7 @@
 								<div class="col-xs-11 form-text-content">
 									<input id="user-email" type="email" name="email" required />
 									<span class="form-text-bar"></span>
-									<label>Email</label>  
+									<label>Email</label>
 								</div>
 							</div>
 							<div class="col-xs-12 form-text">

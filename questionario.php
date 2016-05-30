@@ -19,12 +19,12 @@
 		<meta property="og:site_name" 				 content="Discipuluz"/>
 		
 		<?php include 'scripts.php' ?>
-		<script src="js/questionario.js"></script>
-	
 		<?php include 'styles.php' ?>
+		
 		<link rel="stylesheet" href="css/forms.css" />
 		<script src="js/forms.js"></script>
 		
+		<script src="js/questionario.js"></script>
 		<link rel="stylesheet" href="css/questionario.css" />
 	
 		<link rel="icon" href="images/favicon.png">
