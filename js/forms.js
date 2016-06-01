@@ -65,6 +65,14 @@ $(function(){
             $(this).addClass('filled').addClass('invalid')
         }
     })
+    
+    /**
+     * Mobile Option select
+     */
+    $('label').on('click', function(){
+        $(this).parent().parent().find('.form-radio-label.form-radio-label-selected').removeClass('form-radio-label-selected')
+        $(this).parent().find('.form-radio-label').addClass('form-radio-label-selected')
+    })
 })
 
 function validateForm($form){
