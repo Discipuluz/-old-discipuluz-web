@@ -55,9 +55,9 @@
 							$cont = -1;
 							for($i = 0; $i <= 1; $i++){
 								if($i == 0)
-									echo "<div class='col-xs-12 col-md-5'>";
+									echo "<div class='col-xs-5'>";
 								else
-									echo "<div class='col-xs-12 col-md-offset-1 col-md-5'>";
+									echo "<div class='col-xs-offset-1 col-xs-5'>";
 								foreach ($pdo->query($sql) as $row) {
 										$cont++;
 										if($cont % 2 != $i){
