@@ -72,6 +72,7 @@ $(function(){
     $('label').on('click', function(){
         $(this).parent().parent().find('.form-radio-label.form-radio-label-selected').removeClass('form-radio-label-selected')
         $(this).parent().find('.form-radio-label').addClass('form-radio-label-selected')
+        $(this).parent().find('input[type=radio]').prop('checked', true)
     })
 })
 

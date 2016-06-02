@@ -9,7 +9,6 @@ $(function(){
     $('#questionario-mobile').on('submit', submitQuestions)
             
     function submitQuestions() {
-        var size = $("#questionario > fieldset").length
         var pos = 0;
         results = [0,0,0,0,0,0,0,0];
 
@@ -31,7 +30,6 @@ $(function(){
                 stringResult += charsResult[i*2 + 1]
             }
         }
-        
         showFormUser()
 
         return false
@@ -40,24 +38,15 @@ $(function(){
     /**
      * Shows 2nd form (user) - with animation
      */
-    function showFormUser(){
+    function showFormUser(){        
+        //novototh
         var body = $("html, body")
-        $('#questionario-desktop, #questionario-mobile').css({
-            opacity: 0,
-            height: '20rem'
-        })
-        body.stop().animate({
-            scrollTop: 500
-        }, '500', 'swing', function() {
-            $('#questionario-desktop').addClass('hidden')
-            $('#questionario-mobile').addClass('hidden')
-            
-            $('#questionario-user').css('opacity', 0)
-            $('#questionario-user').removeClass('hidden')
-            $('#questionario-user').animate({
-                opacity: 1 
-            }, 1000)
-        })
+        body.scrollTop(500)
+        $('#questionario-desktop').addClass('hidden')
+        $('#questionario-mobile').addClass('hidden')
+        $('#questionario-mobile').removeClass('visible-xs')
+        
+        $('#questionario-user').removeClass('hidden')
     }
     
     /**
