@@ -69,7 +69,10 @@
 							</div>
 							<div class="col-xs-12 form-submit">
 								<div class="col-xs-12 col-md-offset-8 col-md-4">
-									<button type="submit">Enviar</button>
+									<button type="submit">
+										<p>Enviar</p>
+										<img src="images/loading.svg" />
+									</button>
 								</div>
 							</div>
 						</div>

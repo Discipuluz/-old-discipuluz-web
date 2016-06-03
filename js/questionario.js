@@ -9,6 +9,8 @@ $(function(){
     $('#questionario-mobile').on('submit', submitQuestions)
             
     function submitQuestions() {
+        disableButton($(this).find('button'))
+            
         var pos = 0;
         results = [0,0,0,0,0,0,0,0];
 
@@ -53,30 +55,34 @@ $(function(){
      * Submits last form
      */
     $('#questionario-user').on('submit', function(){
-        var name = $("#user-name").val(),
-            school = $("#user-school").val(),
-            grade = $("input[name=user-grade]:checked").val(),
-            email = $("#user-email").val()
-        
-        $.ajax({
-            url: 'ajax/saveAnswer.php',
-            type: 'POST',
-            data: {
-                name: name,
-                school: school,
-                grade: grade,
-                email: email,
-                numbersResult: results,
-                stringResult: stringResult
-            },
-            success: function (idAnswer) {
-                window.location = "/jungResult.php?resultado=" + stringResult + "&id=" + idAnswer;
-            },
-            error: function(jqXHR, status){
-                console.log(status)
-            }
-        })
-        
+    
+        if(validateForm($('#questionario-user'))){ //forms.validate
+            disableButton($(this).find('button'))
+            var name = $("#user-name").val(),
+                school = $("#user-school").val(),
+                grade = $("input[name=user-grade]:checked").val(),
+                email = $("#user-email").val()
+            
+            $.ajax({
+                url: 'ajax/saveAnswer.php',
+                type: 'POST',
+                data: {
+                    name: name,
+                    school: school,
+                    grade: grade,
+                    email: email,
+                    numbersResult: results,
+                    stringResult: stringResult
+                },
+                success: function (idAnswer) {
+                    window.location = "/jungResult.php?resultado=" + stringResult + "&id=" + idAnswer;
+                },
+                error: function(jqXHR, status){
+                    console.log(status)
+                }
+            })
+        }
+            
         return false
     })
 

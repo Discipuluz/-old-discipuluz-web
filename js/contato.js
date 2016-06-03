@@ -1,6 +1,8 @@
 $(function(){    
     $('#form-contato').on('submit', function(){
         if(validateForm($('#form-contato'))){ //forms.validate
+            disableButton($(this).find('button'))
+            
             var name = $("#user-name").val(),
                 email = $("#user-email").val(),
                 comments = $("#user-comments").val()

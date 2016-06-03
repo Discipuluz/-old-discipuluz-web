@@ -91,8 +91,17 @@ function validate($input){
         $input.parent().find('.form-text-error').removeClass('form-text-error-hidden')
         return false
     }else{
-        console.log('wut?')
         $input.parent().find('.form-text-error').addClass('form-text-error-hidden')
         return true
     }
+}
+
+function disableButton($button){
+    $button.each(function(){
+        $(this).prop('disabled', true)
+    })
+}
+
+function enableButton($button){
+    $button.prop('disabled', false)
 }
